@@ -1,0 +1,12 @@
+# OpenCart
+.htaccess
+/config.php
+image/cache/
+system/cache/
+system/logs/
+system/storage/
+
+# other
+node_modules/*
+bower_components/*
+last-commit/*

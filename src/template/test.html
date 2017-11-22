@@ -1,0 +1,133 @@
+<style>
+    /* стили актуальны только для этой страницы */
+    .test .pure-g {
+        padding-top: 10px;
+        margin-top: 10px;
+        border-top: 1px dotted #ccc;
+    }
+    .test h3 {
+        margin-top: 20px;
+    }
+    .test textarea {
+        width: 100%;
+        height: 100%;
+        font-family: "Lucida Console", Monaco, monospace;
+    }
+</style>
+
+
+
+<main class="test">
+
+    <h1>Test</h1>
+
+    <div class="container">
+
+        <h3>Ссылки</h3>
+        <div class="pure-g">
+            <div class="c-1-2">
+                <a href="#">Ссылка</a>
+            </div>
+            <div class="c-1-2">
+                <textarea><a href="#">Ссылка</a></textarea>
+            </div>
+        </div>
+
+
+        <h3>Кнопки</h3>
+        <div class="pure-g">
+            <div class="c-1-2">
+                <button>Кнопка</button>
+            </div>
+            <div class="c-1-2">
+                <textarea><button>Кнопка</button></textarea>
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="c-1-2">
+                <button class="g-btn">Кнопка</button>
+            </div>
+            <div class="c-1-2">
+                <textarea><button class="g-btn">Кнопка</button></textarea>
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="c-1-2">
+                <a href="#" class="g-btn">Кнопка</a>
+            </div>
+            <div class="c-1-2">
+                <textarea><a href="#" class="g-btn">Кнопка</a></textarea>
+            </div>
+        </div>
+
+        <h3>Форма</h3>
+        <div class="pure-g">
+            <div class="c-1-2">
+                <form action="" class="g-form">
+                    <input type="text">
+                    <p><input type="submit" value="Send"></p>
+                    <p>or</p>                    
+                    <p><button type="submit">Send</button></p>
+                </form>
+            </div>
+            <div class="c-1-2">
+                <textarea><form action="" class="g-form">
+    <input type="text">
+    <p><input type="submit" value="Send"></p>
+    <p>or</p>                    
+    <p><button type="submit">Send</button></p>
+</form></textarea>
+            </div>
+        </div>
+
+        <h3>Форма. Поле ввода</h3>
+        <form action="">
+            <div class="pure-g">
+                <div class="c-1-2">
+                    <input type="text">
+                </div>
+                <div class="c-1-2">
+                    <textarea><input type="text"></textarea>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="c-1-2">
+                    <input type="text" placeholder="Text">
+                </div>
+                <div class="c-1-2">
+                    <textarea><input type="text" placeholder="Text"></textarea>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="c-1-2">
+                    <input type="text" placeholder="Text" value="abc..">
+                </div>
+                <div class="c-1-2">
+                    <textarea><input type="text" placeholder="Text" value="abc.."></textarea>
+                </div>
+            </div>
+
+            <h3>Форма. Кнопка</h3>
+            <div class="pure-g">
+                <div class="c-1-2">
+                    <input type="button" value="type=button">
+                </div>
+                <div class="c-1-2">
+                    <textarea><input type="button" value="type=button"></textarea>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="c-1-2">
+                    <input type="button" value="type=button" class="g-btn">
+                </div>
+                <div class="c-1-2">
+                    <textarea><input type="button" value="type=button" class="g-btn"></textarea>
+                </div>
+            </div>
+        </form>
+
+
+    </div>  <!-- END .container -->
+
+
+</main>

@@ -1,0 +1,155 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: $global_ff1;
+    font-size: 14px;
+    color: $global_color;
+    letter-spacing: .1em;
+    height: 100%;
+    min-width: 320px;
+}
+
+// .rtl body { font-family: $global_ff1_rtl;}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: $global_color;
+    line-height: 1.4;
+}
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
+
+main {
+    padding-top: $global_header_height + 20;
+    margin-bottom: 30px;
+    &.home {
+        padding-top: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 300ms;
+    &:hover {
+        text-decoration: underline;
+        transition: all 300ms;
+        color: #55cb9d;
+    }
+    &.disabled {
+        pointer-events: none;
+        cursor: default;
+        color: #999;
+    }
+}
+
+b { font-weight: bold; }
+
+img { max-width: 100%; }
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: $global_color_2;
+}
+
+// .container.hr-wrap {
+//     margin-top: 40px;
+// }
+
+.page-wrapper {
+    min-height: 100%;
+    margin-bottom: -$global_footer_height;
+}
+.page-buffer {
+    height: $global_footer_height;
+}
+
+.ff-1 { font-family: $global_ff1; }
+.ff-2 { font-family: $global_ff2; }
+
+// .rtl .ff-1 { font-family: $global_ff1_rtl; }
+// .rtl .ff-2 { font-family: $global_ff2_rtl; }
+
+
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.g-btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 1px 5px 0;
+    font-size: 34px;
+    line-height: 1.4;
+    background: #56cc9d;
+    color: #fff;
+    text-transform: uppercase;
+    // border-radius: 5px;
+    // border: 1px solid transparent;
+    &:hover {
+        opacity: .6;
+        color: #fff;
+        text-decoration: none;
+    }
+    // &:focus {
+    //     //outline: thin dotted;
+    // }
+    // &--lang {
+    //     font-size: 23px;
+    //     color: #fff;
+    //     background: #000;
+    //     padding: 2px 7px 0;
+    //     border: 0;
+    // }
+    // &--nav {
+    //     font-size: 23px;
+    //     color: #fff;
+    //     background: #000;
+    //     padding: 0 7px 2px;
+    //     border: 0;
+    // }
+}
+
+// .dropdown-menu {
+//     display: none;
+//     &.open {
+//         display: block;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
