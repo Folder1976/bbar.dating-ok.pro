@@ -20,8 +20,8 @@
 // Verdana, "Geneva CY", "DejaVu Sans", sans-serif;
 
 // $global_ff1: "Josefin Sans", sans-serif;
-$global_ff1: Futura, sans-serif;
-$global_ff2: "Caveat", cursive;
+$global_ff1: "Fira Sans", sans-serif;
+// $global_ff2: "Fira Sans", sans-serif;
 
 // $global_ff1_rtl: "Rubik", sans-serif;
 // $global_ff2_rtl: "Rubik", cursive;
@@ -29,12 +29,16 @@ $global_ff2: "Caveat", cursive;
 
 
 $global_color: #000;
-$global_color_2: #56cc9d;
+$global_color_2: #f6be82;
 
+$global_color_fonts: #424242;
+$global_color_fonts_h: #292929;
 
+$global_color_link: inherit;
+$global_color_link_hover: #f6be82;
 
 // global_header_height
-$global_header_height: 50px;
+$global_header_height: 220px;
 
 // footer height
-$global_footer_height: 55px;
+$global_footer_height: 270px;

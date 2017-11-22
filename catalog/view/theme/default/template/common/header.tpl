@@ -20,9 +20,11 @@
 <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
 <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
+<!-- <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
+<!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" /> -->
 <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,700" rel="stylesheet">
+<link href="catalog/view/theme/default/stylesheet/style.min.css" rel="stylesheet">
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
@@ -38,7 +40,81 @@
 <?php } ?>
 </head>
 <body class="<?php echo $class; ?>">
+
+  <div class="page-wrapper">
+    <header class="header">
+      <div class="top-line">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+              <span class="phone"><a href="tel:380638732900">+38 063 873 29 00</a></span>
+            </div>
+            <div class="col-md-8">
+              <div class="top-nav">
+                <ul>
+                  <li><a href="#">Регистрация</a>/<a href="#">Вход</a></li>
+                  <li><a href="#">Оптовикам</a></li>
+                  <li><a href="#">Новости</a></li>
+                  <li><a href="#">Обучение</a></li>
+                  <li><a href="#">Отзывы</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="top-searh">
+                <form action="/">
+                  <input type="text" placeholder="Поиск...">
+                  <input type="submit" value="Поиск">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="middle-line">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <p>До 20 октября на продукцию Lovely скидка 5%!</p>
+            </div>
+            <div class="col-md-6">
+              <div class="logo">
+                <a href="/"><img src="/image/logo.png" alt="Beauty bar"></a>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="shopping-cart">
+                <div>Моя корзина</div>
+                <div>Товаров (0)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-line">
+        <ul>
+          <li><a href="#">Весь каталог</a></li>
+          <li><a href="#">Lash-мастер</a></li>
+          <li><a href="#">Nail-мастер</a></li>
+          <li><a href="#">Депиляция</a></li>
+          <li><a href="#">Распродажа</a></li>
+        </ul>
+      </div>
+    </header>
+
+
+
+
+
 <nav id="top">
+
+
+
+
+
   <div class="container">
     <?php echo $currency; ?>
     <?php echo $language; ?>

@@ -1,4 +1,6 @@
-<footer>
+  <div class="page-buffer"></div>
+</div>
+<footer class="footer">
   <div class="container">
     <div class="row">
       <?php if ($informations) { ?>

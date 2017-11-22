@@ -5,7 +5,8 @@ html {
 body {
     font-family: $global_ff1;
     font-size: 14px;
-    color: $global_color;
+    color: $global_color_fonts;
+    background: #fff;
     letter-spacing: .1em;
     height: 100%;
     min-width: 320px;
@@ -15,7 +16,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: $global_color;
+    color: $global_color_fonts_h;
     line-height: 1.4;
 }
 h1 { font-size: 36px; }
@@ -35,12 +36,12 @@ main {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: $global_color_link;
     transition: all 300ms;
     &:hover {
         text-decoration: underline;
         transition: all 300ms;
-        color: #55cb9d;
+        color: $global_color_link_hover;
     }
     &.disabled {
         pointer-events: none;
@@ -71,8 +72,8 @@ hr {
     height: $global_footer_height;
 }
 
-.ff-1 { font-family: $global_ff1; }
-.ff-2 { font-family: $global_ff2; }
+// .ff-1 { font-family: $global_ff1; }
+// .ff-2 { font-family: $global_ff2; }
 
 // .rtl .ff-1 { font-family: $global_ff1_rtl; }
 // .rtl .ff-2 { font-family: $global_ff2_rtl; }
