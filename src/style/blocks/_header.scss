@@ -1,6 +1,7 @@
 .header {
     border-top: 5px solid #f6be82;
-    height: $global_header_height;
+    // height: $global_header_height;
+    position: relative;
 
     .logo {
         text-align: center;
@@ -141,14 +142,19 @@
 
 
 
-
+    $bottom-line-height: 50px;
     .bottom-line {
         background: #292929;
         opacity: .8;
-        height: 50px;
+        height: $bottom-line-height;
         color: #fff;
         font-size: 14px;
         text-transform: uppercase;
+        position: absolute;
+        bottom: -$bottom-line-height;
+        left: 0;
+        right: 0;
+        z-index: 10;
         ul {
             margin: 0 auto;
             display: flex;

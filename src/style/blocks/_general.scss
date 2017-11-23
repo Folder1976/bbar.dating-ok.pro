@@ -14,12 +14,14 @@ body {
 // .rtl body { font-family: $global_ff1_rtl;}
 
 h1, h2, h3, h4, h5, h6 {
-    text-align: center;
     color: $global_color_fonts_h;
     line-height: 1.4;
 }
 h1 { font-size: 36px; }
-h2 { font-size: 30px; }
+h2 { 
+    font-size: 30px;
+    margin-bottom: 15px;
+}
 h3 { font-size: 24px; }
 h4 { font-size: 18px; }
 h5 { font-size: 14px; }
@@ -51,6 +53,12 @@ a {
 
 b { font-weight: bold; }
 
+p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
 img { max-width: 100%; }
 
 hr {
@@ -84,6 +92,11 @@ hr {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
+    box-sizing: content-box;
+}
+
+.g-center {
+    text-align: center;
 }
 
 .g-btn {
@@ -92,14 +105,11 @@ hr {
     vertical-align: middle;
     cursor: pointer;
     white-space: nowrap;
-    padding: 1px 5px 0;
-    font-size: 34px;
-    line-height: 1.4;
-    background: #56cc9d;
+    padding: 5px 29px;
+    font-size: 14px;
+    line-height: 35px;
+    background: #898a93;
     color: #fff;
-    text-transform: uppercase;
-    // border-radius: 5px;
-    // border: 1px solid transparent;
     &:hover {
         opacity: .6;
         color: #fff;
@@ -160,6 +170,75 @@ hr {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ************** Home ***************
+.slider {
+    .owl-item .item { text-align: center; }
+    .owl-pagination { top: -30px; }
+    .owl-controls .owl-page {
+        span {
+            background: #878892;
+            box-shadow: none;
+        }
+        &.active span { background: #f7d0a7;}
+    }
+}
+
+.advantages {
+    margin-bottom: 70px;
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    li {
+        position: relative;
+        padding: 0 40px 0 80px;
+        i {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 9px;
+        }
+        .desc {
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 1.4em;
+        }
+    }
+}
+
+
+.last-news {
+    color: #000;
+    img { margin-bottom: 10px; }
+    .title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .date {
+        color: #c1c1c1;
+        line-height: 31px;
+    }
+    .container {
+        margin-bottom: 50px;
+    }
+}
 
 
 
