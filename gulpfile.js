@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     cleanCSS = require('gulp-clean-css'),
     // prefixer = require('gulp-autoprefixer'),
+    rtlcss = require('gulp-rtlcss'),
 
     /*
     * script
@@ -27,6 +28,7 @@ var gulp = require('gulp'),
     * image
     */
     imagemin = require('gulp-imagemin'),
+    spritesmith = require('gulp.spritesmith'),
 
     /*
     * other
@@ -36,9 +38,9 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     clean = require('gulp-clean'),
     browserSync = require("browser-sync").create(),
-    reload = browserSync.reload;
+    reload = browserSync.reload,
 
-    rtlcss = require('gulp-rtlcss');
+    del = require('del');
     // rimraf = require('rimraf'),
 
 
@@ -153,13 +155,48 @@ gulp.task('php:build', function () {
 //*****************************
 //      Images
 //*****************************
-gulp.task('img:build', function () {
+// Удаление старых спрайтов
+// gulp.task('sprite-clean', function (cb) {
+//     del([path.build.img + '/i/sprite-*.png'], cb);
+// });
+
+// Создание спрайтов
+gulp.task('sprite-create', function (cb) {
+    del([path.build.img + '/i/sprite-*.png'], cb);
+
+    var fileName = 'sprite-' + Math.random().toString().replace(/[^0-9]/g, '') + '.png';
+
+    var spriteData = gulp.src('src/img/sprite/*.png').pipe(spritesmith({
+        imgName: fileName,
+        cssName: '_sprite.scss',
+        cssFormat: 'scss',
+        cssVarMap: function (sprite) {
+            sprite.name = 'ico-' + sprite.name;
+        },
+        imgPath: '../image/i/' + fileName
+    }));
+
+    // spriteData.img
+    //     .pipe(imagemin())
+    //     .pipe(gulp.dest(path.build.img));
+
+    spriteData.css
+        .pipe(gulp.dest('src/style/sprite'));
+
+    return spriteData.img.pipe(gulp.dest(path.build.img + '/i'));
+});
+
+
+
+gulp.task('img:build', ['sprite-create'], function () {
     gulp.src(path.src.img)
         .pipe(imagemin())
         .pipe(gulp.dest(path.build.img));
+
+     gulp.task('sprite-create');
 });
 
-gulp.task('img:clean', function () {
+gulp.task('img:clean', function (cb) {
     gulp.src(path.build.img)
         .pipe(clean());
 });

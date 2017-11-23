@@ -7,7 +7,6 @@ body {
     font-size: 14px;
     color: $global_color_fonts;
     background: #fff;
-    letter-spacing: .1em;
     height: 100%;
     min-width: 320px;
 }
@@ -125,15 +124,29 @@ hr {
     // }
 }
 
-// .dropdown-menu {
-//     display: none;
-//     &.open {
-//         display: block;
-//     }
-// }
+
+[class*="ico-"] {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@include sprites($spritesheet-sprites);
 
 
 
+
+
+
+
+
+
+
+.dropdown-menu {
+    display: none;
+    &.open {
+        display: block;
+    }
+}
 
 
 
