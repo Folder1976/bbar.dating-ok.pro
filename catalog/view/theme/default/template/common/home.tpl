@@ -47,8 +47,8 @@
                 <div class="images-wrapp">
                     <div class="image1">
                         <div class="image-gb"></div>
-                        <img src="/image/news/news-post-1_1" alt=""></div>
-                    <div class="image2"><img src="/image/news/news-post-1_2" alt=""></div>
+                        <img src="/image/news/news-post-1_1.jpg" alt=""></div>
+                    <div class="image2"><img src="/image/news/news-post-1_2.jpg" alt=""></div>
                 </div>
             </div>
         </div>

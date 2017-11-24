@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10">
-          <div class="top-nav">
+          <div class="footer-nav">
             <ul>
               <li><a href="#">Регистрация</a>/<a href="#">Вход</a></li>
               <li><a href="#">Оптовикам</a></li>
@@ -30,7 +30,7 @@
         <div class="col-md-4">
           <div class="logo">
             <img src="/image/catalog/logo-white.png" alt="">
-            <p>Магазин профкосметики BeautyBar 2017</p>
+            <p class="copy">Магазин профкосметики BeautyBar 2017<?php //echo $powered; ?></p>
           </div>
         </div>
 
@@ -59,17 +59,22 @@
         </div>
 
         <div class="col-md-4">
-          <p>Подпишитесь и получайте новости об акциях и специальных предложений</p>
-          <form action="" class="subscribe-form">
-            <input type="text" name="subscribe" value="" placeholder="Ваш e-mail" class="subscribe-input" />
-            <button type="button" class="subscribe-btn">Подписаться</button>
-          </form>
+          <div class="subscribe">
+            <p>Подпишитесь и получайте новости об акциях и специальных предложений</p>
+            <form action="" class="subscribe-form">
+              <input type="text" name="subscribe" value="" placeholder="Ваш e-mail" class="subscribe-input" /><button type="button" class="subscribe-btn">Подписаться</button>
+            </form>
+            <p class="social">Мы в соц сетях: <span class="social-link"><a href="#"><i class="ico-fb"></i></a> <a href="#"><i class="ico-tw"></i></a></span></p>
+          </div>
         </div>
 
+      </div>
+    </div>
+  </div>
+</footer>
 
 
-
-        <?php if ($informations) { ?>
+<!--         <?php if ($informations) { ?>
         <div class="col-sm-3">
           <h5><?php echo $text_information; ?></h5>
           <ul class="list-unstyled">
@@ -104,13 +109,8 @@
             <li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
             <li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
           </ul>
-        </div>
-      </div>
-      <hr>
-      <p><?php echo $powered; ?></p>
-    </div>
-  </div>
-</footer>
+        </div> -->
+
 
 <!--
 OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.

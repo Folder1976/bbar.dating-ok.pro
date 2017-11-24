@@ -1,6 +1,101 @@
 .footer {
     height: $global_footer_height;
-    padding: 10px 0;
+    padding: 0;
     background: #292929;
     color: #fff;
+
+    &-top {
+        border-bottom: 1px solid #fff;
+    }
+
+    &-nav {
+        padding: 23px 0;
+        font-style: italic;
+        ul {
+            overflow: hidden;
+        }
+        li {
+            float: left;
+            margin-right: 8px;
+            a {
+                margin: 0 5px;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        padding-top: 30px;
+        .logo {
+            margin-top: 34px;
+        }
+        .copy {
+            margin-top: 10px;
+            font-size: 15px;
+        }
+    }
+
+    &-menu {
+        width: 50%;
+        float: left;
+        .title {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .list {
+            li {}
+            a {
+                line-height: 25px;
+            }
+        }
+        &:last-child {
+            position: relative;
+            top: 0;
+            left: 60px;
+        }
+    }
+
+    .subscribe {
+        padding-left: 60px;
+        p {
+            font-size: 12px;
+            font-style: italic;
+            line-height: 22px;
+            letter-spacing: 0.07em;
+        }
+        &-input {
+            padding: 11px 12px 12px;
+            background: #fff;
+            border: 0;
+            width: 166px;
+        }
+        &-btn {
+            padding: 11px 12px 12px;
+            width: 108px;
+            border: 0;
+            color: #fff;
+            font-style: italic;
+            cursor: pointer;
+            background: #f6be82;
+            transition: all 300ms;
+            &:hover {
+                opacity: .7;
+                transition: all 300ms;
+            }
+        }
+    }
+
+    .social {
+        margin-top: 23px;
+        &-link {
+            margin: 2px 15px;
+            display: inline-block;
+            a { margin-right: 5px; }
+        }
+    }
+
+
 }
+

@@ -1045,40 +1045,52 @@ hr {
   vertical-align: middle; }
 
 .ico-bonus {
-  background-image: url(../image/i/sprite-05355104759694216.png);
+  background-image: url(../image/i/sprite-08363365764330264.png);
   background-position: 0px -51px;
   width: 51px;
   height: 47px; }
 
 .ico-cart {
-  background-image: url(../image/i/sprite-05355104759694216.png);
+  background-image: url(../image/i/sprite-08363365764330264.png);
   background-position: -102px 0px;
   width: 35px;
   height: 33px; }
 
 .ico-coupon {
-  background-image: url(../image/i/sprite-05355104759694216.png);
+  background-image: url(../image/i/sprite-08363365764330264.png);
   background-position: 0px 0px;
   width: 51px;
   height: 51px; }
 
 .ico-delivery {
-  background-image: url(../image/i/sprite-05355104759694216.png);
+  background-image: url(../image/i/sprite-08363365764330264.png);
   background-position: -51px -51px;
   width: 51px;
   height: 41px; }
 
+.ico-fb {
+  background-image: url(../image/i/sprite-08363365764330264.png);
+  background-position: -102px -33px;
+  width: 26px;
+  height: 26px; }
+
 .ico-guarantees {
-  background-image: url(../image/i/sprite-05355104759694216.png);
+  background-image: url(../image/i/sprite-08363365764330264.png);
   background-position: -51px 0px;
   width: 51px;
   height: 51px; }
 
 .ico-search {
-  background-image: url(../image/i/sprite-05355104759694216.png);
-  background-position: -102px -33px;
+  background-image: url(../image/i/sprite-08363365764330264.png);
+  background-position: 0px -98px;
   width: 14px;
   height: 14px; }
+
+.ico-tw {
+  background-image: url(../image/i/sprite-08363365764330264.png);
+  background-position: -102px -59px;
+  width: 26px;
+  height: 26px; }
 
 .dropdown-menu {
   display: none; }
@@ -1279,9 +1291,73 @@ hr {
 
 .footer {
   height: 270px;
-  padding: 10px 0;
+  padding: 0;
   background: #292929;
   color: #fff; }
+  .footer-top {
+    border-bottom: 1px solid #fff; }
+  .footer-nav {
+    padding: 23px 0;
+    font-style: italic; }
+    .footer-nav ul {
+      overflow: hidden; }
+    .footer-nav li {
+      float: left;
+      margin-right: 8px; }
+      .footer-nav li a {
+        margin: 0 5px; }
+        .footer-nav li a:first-child {
+          margin-left: 0; }
+  .footer-bottom {
+    padding-top: 30px; }
+    .footer-bottom .logo {
+      margin-top: 34px; }
+    .footer-bottom .copy {
+      margin-top: 10px;
+      font-size: 15px; }
+  .footer-menu {
+    width: 50%;
+    float: left; }
+    .footer-menu .title {
+      font-size: 16px;
+      margin-bottom: 12px; }
+    .footer-menu .list a {
+      line-height: 25px; }
+    .footer-menu:last-child {
+      position: relative;
+      top: 0;
+      left: 60px; }
+  .footer .subscribe {
+    padding-left: 60px; }
+    .footer .subscribe p {
+      font-size: 12px;
+      font-style: italic;
+      line-height: 22px;
+      letter-spacing: 0.07em; }
+    .footer .subscribe-input {
+      padding: 11px 12px 12px;
+      background: #fff;
+      border: 0;
+      width: 166px; }
+    .footer .subscribe-btn {
+      padding: 11px 12px 12px;
+      width: 108px;
+      border: 0;
+      color: #fff;
+      font-style: italic;
+      cursor: pointer;
+      background: #f6be82;
+      transition: all 300ms; }
+      .footer .subscribe-btn:hover {
+        opacity: .7;
+        transition: all 300ms; }
+  .footer .social {
+    margin-top: 23px; }
+    .footer .social-link {
+      margin: 2px 15px;
+      display: inline-block; }
+      .footer .social-link a {
+        margin-right: 5px; }
 
 .error p {
   line-height: 1.4em; }
