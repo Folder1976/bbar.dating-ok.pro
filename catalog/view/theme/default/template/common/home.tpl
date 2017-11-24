@@ -32,9 +32,36 @@
 
 
 
+<div class="last-news-post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h2>Отличное предложение для вас, милые дамы!</h2>
+                <p>Приглашаем Вас на качественные и безопасные услуги наращивания и ламинирования ресниц, депиляции и ногтевого сервиса.</p>
+                <p>Наша уютная студия находится по адресу Горького, 9 (300 метров от м. Площадь Льва Толстого).</p>
+                <p><b>Консультация и запись по номеру: 098 656 90 65</b></p>
+                <p>В нашей студии работают 7 мастеров-экспертов в области моделирования взгляда, а также мастера маникюра, педикюра, шугаринга и восковой депиляции.</p>
+                <p>При нашей студии действует учебный центр по наращиванию, ламинированию ресниц и моделированию взгляда.</p>
+            </div>
+            <div class="col-md-7">
+                <div class="images-wrapp">
+                    <div class="image1">
+                        <div class="image-gb"></div>
+                        <img src="/image/news/news-post-1_1" alt=""></div>
+                    <div class="image2"><img src="/image/news/news-post-1_2" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 
 <div class="last-news">
-    <div class="container">
+    <div class="title"><h2>Последние новости</h2></div>
+    <div class="container last-news__list">
         <div class="row">
             <div class="col-md-3">
                 <a href="#">

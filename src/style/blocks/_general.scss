@@ -224,21 +224,64 @@ hr {
 }
 
 
+.last-news-post {
+    margin-bottom: 80px;
+    .images-wrapp { position: relative; }
+    .image-gb {
+        height: 100%;
+        width: 100%;
+        background: #f4bd81;
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: 10px;
+    }
+    .image1 {
+        position: relative;
+        z-index: 3;
+        float: right;
+        img {
+            position: relative;
+            z-index: 10;
+        }
+    }
+    .image2 {
+        position: absolute;
+        z-index: 4;
+        top: 70px;
+        right: 235px;
+        img {
+            @include g-box-shadow(8px, 11px, 14px, rgba(0,0,0,.4));
+        }
+    }
+}
+
+
 .last-news {
     color: #000;
     img { margin-bottom: 10px; }
-    .title {
-        font-size: 16px;
-        line-height: 22px;
-    }
-    .date {
-        color: #c1c1c1;
-        line-height: 31px;
+    & > .title {
+        text-align: center;
+        margin-bottom: 40px;
     }
     .container {
         margin-bottom: 50px;
     }
+
+    &__list {
+        text-align: left;
+        .title {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        .date {
+            color: #c1c1c1;
+            line-height: 31px;
+        }
+    }
 }
+
+
 
 
 
