@@ -1,6 +1,7 @@
 # OpenCart
 .htaccess
 /config.php
+admin/config.php
 image/cache/
 system/cache/
 system/logs/
