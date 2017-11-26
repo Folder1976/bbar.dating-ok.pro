@@ -94,7 +94,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="row g-center">
+        <div class="row text-center">
             <a href="#" class="g-btn">Читать все новости</a>
         </div>
     </div>
