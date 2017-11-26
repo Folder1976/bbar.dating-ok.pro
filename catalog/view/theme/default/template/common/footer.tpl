@@ -18,7 +18,9 @@
         </div>
 
         <div class="col-md-2">
-          
+          <div class="pay-card">
+            <i class="ico-visa-cart"></i><i class="ico-master-cart"></i>
+          </div>
         </div>
       </div>
     </div>
