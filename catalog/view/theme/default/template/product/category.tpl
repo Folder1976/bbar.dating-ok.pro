@@ -1,8 +1,5 @@
 <?php echo $header; ?>
 
-<pre>
-  <?php //var_dump( $_SERVER['REDIRECT_URL'], get_defined_vars() ); ?>
-</pre>
 <main class="category">
 <div class="container">
   <ul class="breadcrumb">
@@ -11,46 +8,99 @@
     <?php } ?>
   </ul>
   <h2><?php echo $heading_title; ?></h2>
+</div>
 
-  <div class="row">
+
+<div class="container">
+  <div class="flex-row">
 
 
-    <div class="col-sm-3" style="border-top: 1px solid #e6e6e6;">
+    <div class="filter-column">
       <?php if ($categories) { ?>
-      <h3><?php echo $text_refine; ?></h3>
-      <div class="categories">
-        <ul>
-          <?php foreach ($categories as $category) { ?>
-          <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
-          <?php } ?>
-        </ul>
+      <div class="filter-block">
+        <h3 class="title js-dropdown-filter open"><?php echo $text_refine; ?></h3>
+        <div class="list categories dropdown-filter open">
+          <ul>
+            <?php foreach ($categories as $category) { ?>
+            <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+            <?php } ?>
+          </ul>
+        </div>
       </div>
       <?php } ?>
+
+
+      <div class="filter-block">
+        <h3 class="title js-dropdown-filter">Бренд</h3>
+        <div class="list dropdown-filter">
+          <ul>
+            <li><a href="#">A.P. Durand (3)</a></li>
+            <li><a href="#">ADF (12)</a></li>
+            <li><a href="#">Abercromibe & Fitch (0)</a></li>
+            <li class="active"><a href="#">Axqua di Monaco (99)</a></li>
+            <li><a href="#">A.P. Durand (3)</a></li>
+            <li class="disable"><a href="#">ADF (12)</a></li>
+            <li><a href="#">Abercromibe & Fitch (0)</a></li>
+            <li><a href="#">Axqua di Monaco (99)</a></li>
+            <li><a href="#">A.P. Durand (3)</a></li>
+            <li><a href="#">ADF (12)</a></li>
+            <li><a href="#">Abercromibe & Fitch (0)</a></li>
+            <li><a href="#">Axqua di Monaco (99)</a></li>
+            <li><a href="#">A.P. Durand (3)</a></li>
+            <li><a href="#">ADF (12)</a></li>
+            <li><a href="#">Abercromibe & Fitch (0)</a></li>
+            <li><a href="#">Axqua di Monaco (99)</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="filter-block">
+        <h3 class="title js-dropdown-filter">Цена</h3>
+        <div class="list dropdown-filter">
+          <ul>
+            <li><a href="#">< 100 - 200 грн.</a></li>
+            <li><a href="#">< 300 - 500 грн.</a></li>
+            <li><a href="#">< 500 - 700 грн.</a></li>
+            <li class="active"><a href="#">< 700 - 1000 грн.</a></li>
+            <li><a href="#">< 1000 - 2000 грн.</a></li>
+            <li><a href="#">< 2000 - 3000 грн.</a></li>
+            <li><a href="#">> 3000 грн.</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+
     </div>
 
 
-    <div class="col-sm-9">
+    <div class="container products-column">
       <?php if ($products) { ?>
       <div class="row">
-        <div class="col-md-12">
-          <div class="sort-line">
+        <div class="sort-line">
+          <label class="input-group-addon" for="input-sort"><?php echo $text_sort; ?></label>
 
-            <label class="input-group-addon" for="input-sort"><?php echo $text_sort; ?></label>
-
-            <ul class="sort">
-              <?php
-              foreach ($sorts as $key => $value) {
-                echo '<li><a href="'.$value['href'].'">'.$value['text'].'</a></li>';
+          <ul class="sort">
+            <?php
+            foreach ($sorts as $key => $value) {
+              if ( strpos($value['value'], $sort) === false ) {
+                echo '<li>';
+              } else {
+                echo '<li class="active">';
               }
-              ?>
-            </ul>
+              echo '<a href="'.$value['href'].'">'.$value['text'].'</a></li>';
+            }
+            ?>
+          </ul>
 
-            <div class="order-by">
-              <a href="<?php echo $_SERVER['REDIRECT_URL'].'?sort='.$sort.'&amp;order=DESC'; ?>" class="order-by--desc <?php if ($order == 'DESC') echo 'active'; ?>"></a>
-              <a href="<?php echo $_SERVER['REDIRECT_URL'].'?sort='.$sort.'&amp;order=ASC'; ?>" class="order-by--asc <?php if ($order == 'ASC') echo 'active'; ?>"></a>
-            </div>
-
+          <div class="order-by">
+            <a href="<?php echo $_SERVER['REDIRECT_URL'].'?sort='.$sort.'&amp;order=ASC'; ?>" class="order-by--asc <?php if ($order == 'ASC') echo 'active'; ?>"></a>
+            <a href="<?php echo $_SERVER['REDIRECT_URL'].'?sort='.$sort.'&amp;order=DESC'; ?>" class="order-by--desc <?php if ($order == 'DESC') echo 'active'; ?>"></a>
           </div>
+
         </div>
       </div>
 
@@ -112,8 +162,15 @@
       <?php } ?>
     </div>
   </div>
+</div>
 
 
+
+
+
+
+
+<div class="container">
   <div class="row">
     <div class="advantages">
       <ul>
@@ -147,8 +204,9 @@
       <p>Чем объёмнее наращивание, тем тоньше используемые в нем искусственные ресницы. Это сделано с целью защиты родной ресницы от перегруженности. Поэтому не стоит беспокоиться, что объёмное наращивание повредит Вашим ресницам: их густотой и пышностью можно абсолютно безопасно наслаждаться длительное время.</p>
       <p><a href="#">Читать полностью</a></p>
   </div>
-
 </div>
+
+
 </main>
 
 <?php echo $footer; ?>

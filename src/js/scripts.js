@@ -39,6 +39,18 @@ $(document).mouseup(function (e){
     }
 });
 /*************************************************************/
+// блоки в фильтре кетегорий
+$('.js-dropdown-filter').on('click', function(){
+    var menu = $(this).parent().find('.dropdown-filter');
+    if ( menu.hasClass('open') ) {
+        menu.removeClass('open');
+        $(this).removeClass('open');
+    } else {
+        menu.addClass('open');
+        $(this).addClass('open');
+    }
+});
+
 /*************************************************************/
 /*************************************************************/
 /*************************************************************/

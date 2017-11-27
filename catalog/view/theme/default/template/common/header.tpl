@@ -96,11 +96,11 @@
 
       <div class="bottom-line">
         <ul>
-          <li><a href="#">Весь каталог</a></li>
-          <li><a href="#">Lash-мастер</a></li>
-          <li><a href="#">Nail-мастер</a></li>
-          <li><a href="#">Депиляция</a></li>
-          <li><a href="#">Распродажа</a></li>
+          <?php
+          foreach ($categories as $cat) {
+            echo '<li><a href="'.$cat['href'].'">'.$cat['name'].'</a></li>';
+          }
+          ?>
         </ul>
       </div>
     </header>

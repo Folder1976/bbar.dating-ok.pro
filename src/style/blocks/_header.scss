@@ -171,6 +171,13 @@
                     text-decoration: none;
                 }
             }
+            &.active {
+                a {
+                    background: $global_color_link_hover;
+                    color: $global_color_fonts;
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
