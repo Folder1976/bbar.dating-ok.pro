@@ -159,6 +159,10 @@
         <div class="col-sm-4"><a href="#" class="g-btn g-btn--more-prod">Больше товаров</a></div>
         <div class="col-sm-4 text-right"><?php echo $pagination; ?></div>
       </div>
+      <?php } else { ?>
+      <div class="row">
+        <h3 class="text-center"><?php echo $text_empty; ?></h3>
+      </div>
       <?php } ?>
     </div>
   </div>
