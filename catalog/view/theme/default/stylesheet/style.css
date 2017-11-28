@@ -1013,6 +1013,9 @@ hr {
   height: 1px;
   background-color: #f6be82; }
 
+textarea:focus, input:focus {
+  outline: none; }
+
 .page-wrapper {
   min-height: 100%;
   margin-bottom: -270px; }

@@ -67,6 +67,10 @@ hr {
     background-color: $global_color_2;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 // .container.hr-wrap {
 //     margin-top: 40px;
 // }
