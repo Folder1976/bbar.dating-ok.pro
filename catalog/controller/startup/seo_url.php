@@ -45,9 +45,19 @@ class ControllerStartupSeoUrl extends Controller {
 						$this->request->get['route'] = $query->row['query'];
 					}
 				} else {
-					$this->request->get['route'] = 'error/not_found';
+					
+					if($this->db->escape($part)  == 'catalogs'){
+						$this->request->get['path'] = 0;
+						$url[0] = 'category_id';
+						$url[1] = 0;
+					}else{
+						
+						$this->request->get['route'] = 'error/not_found';
 
-					break;
+						break;	
+						
+					}
+					
 				}
 			}
 
