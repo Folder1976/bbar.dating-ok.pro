@@ -1,5 +1,5 @@
 <!-- Button fastorder -->
-<button type="button" id="btn-formcall<?php echo $product_id?>" class="btn btn-danger btn-lg btn-block btn-fastorder">
+<button type="button" id="btn-formcall<?php echo $product_id?>" class="g-btn g-btn--buy btn-fastorder">
   <?php echo $text_fastorder_button;?>
 </button>
 
