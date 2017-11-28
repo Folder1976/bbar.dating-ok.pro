@@ -1,5 +1,5 @@
 <?php
-class ControllerCommonContentTop extends Controller {
+class ControllerCommonContentTopNews extends Controller {
 	public function index() {
 		$this->load->model('design/layout');
 
@@ -47,7 +47,7 @@ class ControllerCommonContentTop extends Controller {
 
 		foreach ($modules as $module) {
 			
-			if(strpos($module['code'],'featured') !== false) continue; 
+			if(strpos($module['code'],'featured') === false) continue; 
 			
 			$part = explode('.', $module['code']);
 
@@ -72,7 +72,6 @@ class ControllerCommonContentTop extends Controller {
 			}
 		}
 
-		
 		return $this->load->view('common/content_top', $data);
 	}
 }
