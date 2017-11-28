@@ -164,7 +164,9 @@ gulp.task('php:build', function () {
 gulp.task('sprite-create', function (cb) {
     del([path.build.img + '/i/sprite-*.png'], cb);
 
-    var fileName = 'sprite-' + Math.random().toString().replace(/[^0-9]/g, '') + '.png';
+    // рендомное имя файла
+    // var fileName = 'sprite-' + Math.random().toString().replace(/[^0-9]/g, '') + '.png';
+    var fileName = 'sprite.png';
 
     var spriteData = gulp.src('src/img/sprite/*.png').pipe(spritesmith({
         imgName: fileName,

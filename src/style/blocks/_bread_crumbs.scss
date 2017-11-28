@@ -14,3 +14,27 @@
 //         }
 //     }
 // }
+.breadcrumb {
+    padding: 20px 0 10px;
+    font-style: italic;
+    li {
+        display: inline-block;
+        margin-right: 10px;
+        color: #a4a4a4;
+        a {
+            margin-right: 10px;
+        }
+        &:after {
+            content: "/";
+        }
+        &:first-child {
+            display: none;
+        }
+        &:last-child {
+            color: #292929;
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

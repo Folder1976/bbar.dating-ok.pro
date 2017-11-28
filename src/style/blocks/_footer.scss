@@ -5,7 +5,7 @@
     color: #fff;
 
     &-top {
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid #3b3b3b;
     }
 
     &-nav {
@@ -22,6 +22,20 @@
                 &:first-child {
                     margin-left: 0;
                 }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .pay-card {
+        padding-top: 14px;
+        text-align: right;
+        i {
+            margin-left: 40px;
+            &:first-child {
+                margin-left: 0;
             }
         }
     }
@@ -43,6 +57,7 @@
         .title {
             font-size: 16px;
             margin-bottom: 12px;
+            color: #afafaf;
         }
         .list {
             li {}

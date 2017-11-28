@@ -1,4 +1,5 @@
-<h3><?php echo $heading_title; ?></h3>
+<div class="container featured">
+<h2><?php echo $heading_title; ?></h2>
 <div class="row">
   <?php foreach ($products as $product) { ?>
   <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -32,11 +33,12 @@
         <?php } ?>
       </div>
       <div class="button-group">
-        <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
-        <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
-        <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
+        <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');" class="g-btn g-btn--buy"><span><?php echo $button_cart; ?></span></button>
+        <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');" class="g-btn g-btn--small g-btn--wishlist"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');" class="g-btn g-btn--small g-btn--compare"><i class="fa fa-exchange"></i></button>
       </div>
     </div>
   </div>
   <?php } ?>
+</div>
 </div>
