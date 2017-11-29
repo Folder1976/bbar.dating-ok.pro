@@ -29,50 +29,7 @@
       </div>
       <?php } ?>
 
-
-      <div class="filter-block">
-        <h3 class="title js-dropdown-filter">Бренд</h3>
-        <div class="list dropdown-filter">
-          <ul>
-            <li><a href="#">A.P. Durand (3)</a></li>
-            <li><a href="#">ADF (12)</a></li>
-            <li><a href="#">Abercromibe & Fitch (0)</a></li>
-            <li class="active"><a href="#">Axqua di Monaco (99)</a></li>
-            <li><a href="#">A.P. Durand (3)</a></li>
-            <li class="disable"><a href="#">ADF (12)</a></li>
-            <li><a href="#">Abercromibe & Fitch (0)</a></li>
-            <li><a href="#">Axqua di Monaco (99)</a></li>
-            <li><a href="#">A.P. Durand (3)</a></li>
-            <li><a href="#">ADF (12)</a></li>
-            <li><a href="#">Abercromibe & Fitch (0)</a></li>
-            <li><a href="#">Axqua di Monaco (99)</a></li>
-            <li><a href="#">A.P. Durand (3)</a></li>
-            <li><a href="#">ADF (12)</a></li>
-            <li><a href="#">Abercromibe & Fitch (0)</a></li>
-            <li><a href="#">Axqua di Monaco (99)</a></li>
-          </ul>
-        </div>
-      </div>
-
-
-      <div class="filter-block">
-        <h3 class="title js-dropdown-filter">Цена</h3>
-        <div class="list dropdown-filter">
-          <ul>
-            <li><a href="#">< 100 - 200 грн.</a></li>
-            <li><a href="#">< 300 - 500 грн.</a></li>
-            <li><a href="#">< 500 - 700 грн.</a></li>
-            <li class="active"><a href="#">< 700 - 1000 грн.</a></li>
-            <li><a href="#">< 1000 - 2000 грн.</a></li>
-            <li><a href="#">< 2000 - 3000 грн.</a></li>
-            <li><a href="#">> 3000 грн.</a></li>
-          </ul>
-        </div>
-      </div>
-
-
-
-
+      <?php echo $column_left; ?>
 
     </div>
 

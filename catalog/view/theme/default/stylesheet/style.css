@@ -1459,9 +1459,11 @@ textarea:focus, input:focus {
   transition: all 300ms;
   margin-top: 0; }
   .dropdown-filter.open {
-    height: 200px;
+    height: auto;
     transition: all 300ms;
-    margin-top: 15px; }
+    margin-top: 15px;
+    max-height: 200px;
+    overflow: auto; }
 
 .sort-line {
   display: flex;
