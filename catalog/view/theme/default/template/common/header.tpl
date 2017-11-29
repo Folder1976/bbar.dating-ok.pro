@@ -27,7 +27,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,700" rel="stylesheet">
 <link href="catalog/view/theme/default/stylesheet/style.min.css" rel="stylesheet">
-<script src="catalog/view/theme/default/js/scripts.js"></script>
+<script src="catalog/view/theme/default/js/scripts_lib.js" type="text/javascript"></script>
+<script src="catalog/view/theme/default/js/scripts.js" type="text/javascript"></script>
 
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />

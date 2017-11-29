@@ -57,7 +57,7 @@ var path = {
     },
     src: { // Пути откуда брать исходники
         html: 'src/*.html', 			// Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-        js: 'src/js/*.js',
+        js: 'src/js/',
         style: 'src/style/*.scss',
         img: 'src/img/**/*.*', 			// Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/**/*.*'
@@ -113,10 +113,17 @@ gulp.task('style:clean', function () {
 //      Scrits
 //*****************************
 gulp.task('script:build', function () {
-    gulp.src(path.src.js)
+    gulp.src(path.src.js + '*.js')
         //.pipe(uglify())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream:true}));
+
+    gulp.src(path.src.js + 'lib/*.js')
+        .pipe(rigger())
+        .pipe(uglify())
+        .pipe(gulp.dest(path.build.js))
+        .pipe(reload({stream:true}));
+
 });
 
 gulp.task('script:clean', function () {

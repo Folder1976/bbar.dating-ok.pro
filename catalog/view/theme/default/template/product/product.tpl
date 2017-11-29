@@ -1,4 +1,10 @@
 <?php echo $header; ?>
+
+<?php
+$price_and_currency = explode('  ', $price);
+$special_price_and_currency = explode('  ', $special);
+?>
+
 <main class="product">
 <div class="container">
   <ul class="breadcrumb">
@@ -9,24 +15,46 @@
 
   <div class="row">
     <div class="col-md-6">
-      <?php if ($thumb || $images) { ?>
-      <ul class="thumbnails">
-        <?php if ($thumb) { ?>
-        <li><a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
+      <div class="prod-foto">
+        <?php if ($thumb || $images) { ?>
+        <?php
+        $count_images = 0;
+        $c_img = 0;
+        ?>
+        <div class="thumbnails-wrap">
+          <ul class="thumbnails">
+            <?php if ($thumb) { $count_images++; ?>
+            <li><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" data-img="<?php echo $popup; ?>"></li>
+            <?php $c_img = 1; ?>
+            <?php } ?>
+            <?php if ($images) { $count_images =+ count($images); ?>
+              <?php foreach ($images as $image) { ?>
+                <?php if ($c_img > 2) { ?>
+                  <li style="display: none;"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" data-img="<?php echo $image['popup']; ?>"></li>
+                <?php } else { ?>
+                  <li><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" data-img="<?php echo $image['popup']; ?>"></li>
+                <?php } ?>
+              <?php $c_img++; ?>
+              <?php } ?>
+            <?php } ?>
+          </ul>
+        <?php
+          if ($count_images > 3) {
+            echo '<div class="show-all-thumbnails js-show-all-thumbnails">Еще '.($count_images-2).'</div>';
+          }
+          ?>
+        </div>
+
+        <div class="detail-img" id="detail-img"></div>
+
         <?php } ?>
-        <?php if ($images) { ?>
-        <?php foreach ($images as $image) { ?>
-        <li class="image-additional"><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
-        <?php } ?>
-        <?php } ?>
-      </ul>
-      <?php } ?>
+      </div>
     </div>
 
     <div class="col-md-6">
       <h1><?php echo $heading_title; ?></h1>
       <ul class="short-list-line">
-        <li><?php echo $text_stock; ?> <?php echo $stock; ?></li>
+        <li><i class="ico-checked"></i><span><?php echo $stock; ?></span></li>
         <li style="font-weight: 400;"><?php echo $text_model; ?> <?php echo $model; ?></li>
       </ul>
       <div class="row">
@@ -35,10 +63,10 @@
           <?php if ($price) { ?>
           <div class="price-block">
             <?php if (!$special) { ?>
-              <h2 class="price"><?php echo $price; ?><span class="currency">грн</span></h2>
+              <h2 class="price"><?php echo $price_and_currency[0]; ?><span class="currency"> <?php echo $price_and_currency[1]; ?></span></h2>
             <?php } else { ?>
-            <div class="old-price"><?php echo $price; ?><span class="currency">грн</span></span></div>
-            <h2 class="price"><?php echo $special; ?><span class="currency">грн</span></h2>
+            <div class="old-price"><?php echo $price_and_currency[0]; ?><span class="currency"> <?php echo $price_and_currency[1]; ?></span></div>
+            <h2 class="price"><?php echo $special_price_and_currency[0]; ?><span class="currency"> <?php echo $special_price_and_currency[1]; ?></span></h2>
             <?php } ?>
 
             <?php if (false) { // ($tax) { ?>
@@ -65,8 +93,10 @@
               <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="g-btn g-btn--buy"><?php echo $button_cart; ?></button>
             </div>
 
-            <div>Бесплатная доставка</div>
-            <div>Гарантии</div>
+            <ul class="promo">
+              <li><i class="ico-truck"></i> <span>Бесплатная доставка</span></li>
+              <li><i class="ico-badge"></i> <span>Гарантии</span></li>
+            </ul>
 
           </div> <!-- end price-block -->
           <?php } ?>
@@ -75,6 +105,7 @@
         <div class="col-md-6">
           <div id="product">
             <?php if ($options) { ?>
+            <div class="options">
 
             <?php foreach ($options as $option) { ?>
             <?php if ($option['type'] == 'select') { ?>
@@ -95,16 +126,16 @@
             <?php if ($option['type'] == 'radio') { ?>
             <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
               <label class="control-label"><?php echo $option['name']; ?></label>
-              <div id="input-option<?php echo $option['product_option_id']; ?>">
+              <div id="input-option<?php echo $option['product_option_id']; ?>" class="group-radio">
                 <?php foreach ($option['product_option_value'] as $option_value) { ?>
                 <div class="radio">
-                  <label>
-                    <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" />
+                  <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" id="option<?php echo $option['product_option_id'].'_'.$option_value['product_option_value_id']; ?>" />
+                  <label for="option<?php echo $option['product_option_id'].'_'.$option_value['product_option_value_id']; ?>">
                     <?php if ($option_value['image']) { ?>
                     <img src="<?php echo $option_value['image']; ?>" alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>" class="img-thumbnail" /> 
                     <?php } ?>                    
                     <?php echo $option_value['name']; ?>
-                    <?php if ($option_value['price']) { ?>
+                    <?php if (false) { // ($option_value['price']) { ?>
                     (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
                     <?php } ?>
                   </label>
@@ -184,6 +215,7 @@
             </div>
             <?php } ?>
             <?php } ?>
+            </div> <!-- end options -->
             <?php } ?>
             <?php if ($recurrings) { ?>
             <hr>
@@ -248,12 +280,13 @@
           </table>
         </div>
         <?php } ?>
-        <?php if (false) { // ($review_status) { ?>
+        <?php if ($review_status) { ?>
         <div class="tab-pane" id="tab-review">
           <form class="form-horizontal" id="form-review">
             <div id="review"></div>
             <h2><?php echo $text_write; ?></h2>
             <?php if ($review_guest) { ?>
+            <div class="row">
             <div class="form-group required">
               <div class="col-sm-12">
                 <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
@@ -287,6 +320,7 @@
               <div class="pull-right">
                 <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
               </div>
+            </div>
             </div>
             <?php } else { ?>
             <?php echo $text_login; ?>
@@ -340,6 +374,37 @@
 
 <?php // echo $content_bottom; ?>
 <?php // echo $column_right; ?>
+
+
+
+
+<script>
+  $('.thumbnails li').on('mouseover', function() {
+    var src = $(this).find('img').data('img');
+    var alt = $(this).find('img').attr('alt');
+
+    $('.thumbnails li').removeClass('active');
+    $(this).addClass('active');
+
+    $('#detail-img').html('<img src="' + src + '" alt="' + alt + '">');
+  });
+  $('.thumbnails li:first').mouseover();
+
+  $('.js-show-all-thumbnails').on('click', function() {
+    $(this).remove();
+    $('.thumbnails li').show();
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
 
 
 
