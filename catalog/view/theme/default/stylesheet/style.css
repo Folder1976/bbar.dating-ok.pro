@@ -1593,7 +1593,8 @@ textarea:focus, input:focus {
   margin-bottom: 10px; }
 
 .prod-foto {
-  margin-top: 10px; }
+  margin-top: 10px;
+  margin-bottom: 40px; }
   .prod-foto .thumbnails-wrap {
     width: 90px;
     float: left; }

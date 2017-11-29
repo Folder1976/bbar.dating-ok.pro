@@ -230,7 +230,7 @@ $special_price_and_currency = explode('  ', $special);
               <div class="help-block" id="recurring-description"></div>
             </div>
             <?php } ?>
-            <div class="form-group">
+            <div class="form-group" style="display: none;">
               <label class="control-label" for="input-quantity"><?php echo $entry_qty; ?></label>
               <input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
