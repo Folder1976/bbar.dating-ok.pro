@@ -1691,19 +1691,22 @@ textarea:focus, input:focus {
 
 .options .group-radio {
   overflow: hidden;
-  margin-top: 10px; }
+  margin-top: 10px;
+  margin-bottom: 8px; }
 
 .options .radio {
   float: left; }
   .options .radio label {
     position: relative;
-    display: inline-block;
     margin: 0 10px 10px 0;
     padding: 5px 10px;
     text-align: center;
     border: 1px solid #e5e5e5;
     transition: all 300ms;
-    cursor: pointer; }
+    cursor: pointer;
+    display: block;
+    width: 50px;
+    white-space: nowrap; }
   .options .radio input {
     position: absolute;
     opacity: 0; }
