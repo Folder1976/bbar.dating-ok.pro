@@ -241,6 +241,9 @@
             font-weight: bold;
             font-size: 15px;
             line-height: 35px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
         h3 {
             text-align: center;
