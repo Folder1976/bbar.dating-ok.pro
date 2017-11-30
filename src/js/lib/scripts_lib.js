@@ -3,6 +3,7 @@ $(document).ready(function() {
 
 /*************************************************************/
 //= ../../../bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js
+//= ../../../bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js
 
 /*************************************************************/
 /*************************************************************/

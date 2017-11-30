@@ -72,11 +72,14 @@
                   <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
                   <p><?php echo $product['description']; ?></p>
                   <?php if ($product['price']) { ?>
+                  <?php $price_and_currency = explode('  ', $product['price']); ?>
+
                   <p class="price">
                     <?php if (!$product['special']) { ?>
-                    <?php echo $product['price']; ?>
+                    <?php echo round($price_and_currency[0], 2); ?><span class="currency"> <?php echo $price_and_currency[1]; ?></span>
                     <?php } else { ?>
-                    <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+                    <?php $special_price_and_currency = explode('  ', $product['special']); ?>
+                    <span class="price-old"><?php echo round($price_and_currency[0], 2); ?></span> <span class="price-new"><?php echo round($special_price_and_currency[0], 2); ?></span> <span class="currency"> <?php echo $special_price_and_currency[1]; ?></span>
                     <?php } ?>
                     <?php if ($product['tax']) { ?>
                     <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>

@@ -63,10 +63,10 @@ $special_price_and_currency = explode('  ', $special);
           <?php if ($price) { ?>
           <div class="price-block">
             <?php if (!$special) { ?>
-              <h2 class="price"><?php echo $price_and_currency[0]; ?><span class="currency"> <?php echo $price_and_currency[1]; ?></span></h2>
+              <h2 class="price"><?php echo round($price_and_currency[0], 2); ?><span class="currency"> <?php echo $price_and_currency[1]; ?></span></h2>
             <?php } else { ?>
-            <div class="old-price"><?php echo $price_and_currency[0]; ?><span class="currency"> <?php echo $price_and_currency[1]; ?></span></div>
-            <h2 class="price"><?php echo $special_price_and_currency[0]; ?><span class="currency"> <?php echo $special_price_and_currency[1]; ?></span></h2>
+            <div class="old-price"><?php echo round($price_and_currency[0], 2); ?><span class="currency"> <?php echo $price_and_currency[1]; ?></span></div>
+            <h2 class="price"><?php echo round($special_price_and_currency[0], 2); ?><span class="currency"> <?php echo $special_price_and_currency[1]; ?></span></h2>
             <?php } ?>
 
             <?php if (false) { // ($tax) { ?>
