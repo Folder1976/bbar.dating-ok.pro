@@ -62,7 +62,7 @@
                   <li><a href="#">Новости</a></li>
                   <li><a href="#">Обучение</a></li>
                   <li><a href="#">Отзывы</a></li>
-                  <li><a href="#">Контакты</a></li>
+                  <li><a href="/index.php?route=information/contact">Контакты</a></li>
                 </ul>
               </div>
             </div>
