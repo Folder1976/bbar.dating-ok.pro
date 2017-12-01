@@ -54,6 +54,8 @@ class ControllerInformationContact extends Controller {
 		$data['entry_email'] = $this->language->get('entry_email');
 		$data['entry_enquiry'] = $this->language->get('entry_enquiry');
 
+		$data['email'] = $this->config->get('config_email');
+		
 		$data['button_map'] = $this->language->get('button_map');
 
 		if (isset($this->error['name'])) {
