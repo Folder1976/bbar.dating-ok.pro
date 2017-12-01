@@ -3,9 +3,13 @@ $(document).ready(function() {
 
 /*************************************************************/
 //= ../../../bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js
-//= ../../../bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js
 
 /*************************************************************/
+// Для того, чтобы проверить тег на содержание в нем атрибута
+// расширяем jQuery методом hasAttr
+$.fn.hasAttr = function(name) {
+   return this.attr(name) !== undefined;
+};
 /*************************************************************/
 /*************************************************************/
 /*************************************************************/

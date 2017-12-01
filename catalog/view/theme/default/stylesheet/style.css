@@ -1072,6 +1072,9 @@ textarea:focus, input:focus {
   .g-btn--more-prod {
     background: #e0ad77;
     text-transform: uppercase; }
+  .g-btn--show-contact-form {
+    background: #393939;
+    font-size: 16px; }
 
 [class*="ico-"] {
   display: inline-block;
@@ -1079,7 +1082,7 @@ textarea:focus, input:focus {
 
 .ico-badge {
   background-image: url(../image/i/sprite.png);
-  background-position: -102px -79px;
+  background-position: -96px -98px;
   width: 19px;
   height: 19px; }
 
@@ -1103,7 +1106,7 @@ textarea:focus, input:focus {
 
 .ico-coupon {
   background-image: url(../image/i/sprite.png);
-  background-position: 0px 0px;
+  background-position: -51px 0px;
   width: 51px;
   height: 51px; }
 
@@ -1113,23 +1116,47 @@ textarea:focus, input:focus {
   width: 51px;
   height: 41px; }
 
+.ico-email {
+  background-image: url(../image/i/sprite.png);
+  background-position: -115px -98px;
+  width: 19px;
+  height: 15px; }
+
 .ico-fb {
   background-image: url(../image/i/sprite.png);
-  background-position: -26px -98px;
+  background-position: 0px -98px;
   width: 26px;
   height: 26px; }
 
 .ico-guarantees {
   background-image: url(../image/i/sprite.png);
-  background-position: -51px 0px;
+  background-position: 0px 0px;
   width: 51px;
   height: 51px; }
+
+.ico-house {
+  background-image: url(../image/i/sprite.png);
+  background-position: -102px -79px;
+  width: 19px;
+  height: 19px; }
+
+.ico-like {
+  background-image: url(../image/i/sprite.png);
+  background-position: -121px -79px;
+  width: 19px;
+  height: 19px; }
 
 .ico-master-cart {
   background-image: url(../image/i/sprite.png);
   background-position: -102px 0px;
   width: 51px;
   height: 31px; }
+
+.ico-phone-call {
+  background-image: url(../image/i/sprite.png);
+  background-position: -77px -98px;
+  width: 19px;
+  height: 19px; }
 
 .ico-search {
   background-image: url(../image/i/sprite.png);
@@ -1139,13 +1166,13 @@ textarea:focus, input:focus {
 
 .ico-truck {
   background-image: url(../image/i/sprite.png);
-  background-position: -121px -79px;
+  background-position: -134px -98px;
   width: 19px;
   height: 13px; }
 
 .ico-tw {
   background-image: url(../image/i/sprite.png);
-  background-position: 0px -98px;
+  background-position: -26px -98px;
   width: 26px;
   height: 26px; }
 
@@ -1161,13 +1188,16 @@ textarea:focus, input:focus {
     display: block; }
 
 .collapse {
-  transition: all 300ms;
   height: 0;
-  display: none; }
-  .collapse.in {
-    transition: all 300ms;
-    display: block;
-    height: auto; }
+  overflow: hidden; }
+  .collapse-dropdown-link .closed-text {
+    display: inline-block; }
+  .collapse-dropdown-link .opened-text {
+    display: none; }
+  .collapse-dropdown-link.open .closed-text {
+    display: none; }
+  .collapse-dropdown-link.open .opened-text {
+    display: inline-block; }
 
 .pagination {
   display: flex;
@@ -1473,6 +1503,44 @@ textarea:focus, input:focus {
     margin-top: 15px;
     max-height: 200px;
     overflow: auto; }
+
+.checkbox {
+  margin-bottom: 10px;
+  position: relative; }
+  .checkbox input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .checkbox-label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 28px; }
+    .checkbox-label:hover {
+      opacity: .7; }
+    .checkbox-label:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #e6e6e6;
+      width: 15px;
+      height: 15px; }
+    .checkbox-label:after {
+      content: "";
+      display: none;
+      position: absolute;
+      left: 4px;
+      top: 0px;
+      width: 4px;
+      height: 8px;
+      transform: rotate(45deg);
+      border-bottom: 3px solid #000;
+      border-right: 3px solid #000;
+      border-radius: 1px; }
+  .checkbox input:checked ~ .checkbox-label:after {
+    display: block; }
 
 .sort-line {
   display: flex;
@@ -1889,6 +1957,60 @@ textarea:focus, input:focus {
       display: inline-block; }
       .footer .social-link a {
         margin-right: 5px; }
+
+.information-contact h1 {
+  font-style: italic; }
+
+.information-contact .map {
+  margin-top: 30px; }
+
+.information-contact .advantages {
+  margin-top: 30px;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 70px; }
+
+.contact-info {
+  margin-top: 82px; }
+  .contact-info address, .contact-info div {
+    line-height: 1.4em;
+    margin-bottom: 10px; }
+    .contact-info address span, .contact-info div span {
+      padding-left: 10px;
+      letter-spacing: 0.02em; }
+    .contact-info address i, .contact-info div i {
+      position: relative;
+      top: -2px; }
+
+.contact-form {
+  margin: 0 30px; }
+
+.information .breadcrumb {
+  text-align: center; }
+
+.information h1 {
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 10px; }
+
+.information .date {
+  text-align: center;
+  color: #a4a4a4;
+  font-weight: 300;
+  margin-bottom: 25px; }
+
+.information .content {
+  max-width: 770px;
+  margin: 0 auto; }
+
+.information p {
+  font-size: 18px;
+  line-height: 28px; }
+
+.information .advantages {
+  margin-top: 30px;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 70px; }
 
 .error p {
   line-height: 1.4em; }

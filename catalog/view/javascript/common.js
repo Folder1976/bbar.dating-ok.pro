@@ -127,7 +127,7 @@ $(document).ready(function() {
 	});
 
 	// tooltips on hover
-	$('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
+	// $('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
 
 	// Makes tooltips work on ajax generated content
 	$(document).ajaxStop(function() {
@@ -144,10 +144,10 @@ var cart = {
 			data: 'product_id=' + product_id + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
 			dataType: 'json',
 			beforeSend: function() {
-				$('#cart > button').button('loading');
+				$('#cart > button').html('loading');
 			},
 			complete: function() {
-				$('#cart > button').button('reset');
+				$('#cart > button').html('reset');
 			},
 			success: function(json) {
 				$('.alert, .text-danger').remove();

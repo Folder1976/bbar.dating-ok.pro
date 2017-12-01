@@ -40,8 +40,8 @@
           <div class="footer-menu">
             <div class="title">О компании</div>
             <ul class="list">
-              <li><a href="#">Наши контакты</a></li>
-              <li><a href="#">Об интернет-магазине</a></li>
+              <li><a href="/index.php?route=information/contact">Наши контакты</a></li>
+              <li><a href="/about_us">Об интернет-магазине</a></li>
               <li><a href="#">Почему мы?</a></li>
               <li><a href="#">Карьера у нас</a></li>
               <li><a href="#">Блог</a></li>
@@ -51,7 +51,7 @@
           <div class="footer-menu">
             <div class="title">Помощь</div>
             <ul class="list">
-              <li><a href="#">Доставка</a></li>
+              <li><a href="/delivery">Доставка</a></li>
               <li><a href="#">Оплата</a></li>
               <li><a href="#">Возврат</a></li>
               <li><a href="#">Персональный счет</a></li>

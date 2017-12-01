@@ -8,15 +8,12 @@
           <div id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
             <?php foreach ($filter_group['filter'] as $filter) { ?>
             <div class="checkbox">
-              <label>
-                <?php if (in_array($filter['filter_id'], $filter_category)) { ?>
-                <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" checked="checked" />
-                <?php echo $filter['name']; ?>
-                <?php } else { ?>
-                <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" />
-                <?php echo $filter['name']; ?>
-                <?php } ?>
-              </label>
+              <?php if (in_array($filter['filter_id'], $filter_category)) { ?>
+              <input type="checkbox" id="filter_<?php echo $filter['filter_id']; ?>" name="filter[]" value="<?php echo $filter['filter_id']; ?>" checked="checked" />
+              <?php } else { ?>
+              <input type="checkbox" id="filter_<?php echo $filter['filter_id']; ?>" name="filter[]" value="<?php echo $filter['filter_id']; ?>" />
+              <?php } ?>
+              <label class="checkbox-label" for="filter_<?php echo $filter['filter_id']; ?>"><?php echo $filter['name']; ?></label>
             </div>
             <?php } ?>
           </div>

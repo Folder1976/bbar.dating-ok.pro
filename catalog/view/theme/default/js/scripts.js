@@ -43,15 +43,31 @@ $(document).mouseup(function (e){
 $('.js-dropdown-filter').on('click', function(){
     var menu = $(this).parent().find('.dropdown-filter');
     if ( menu.hasClass('open') ) {
-        menu.removeClass('open');
+        menu.removeClass('open').css({height: 0});
         $(this).removeClass('open');
     } else {
-        menu.addClass('open');
+        menu.addClass('open').css({height: $(menu)[0].scrollHeight});
         $(this).addClass('open');
     }
 });
 
 /*************************************************************/
+// плавное разворачивание/сворачивание
+$('.js-dropdown-link').on('click', function(){
+    if ( $(this).hasAttr('data-toggle') ) {
+        var menu = $('.' + $(this).data('toggle') );
+    } else {
+        var menu = $(this).parent().find('.dropdown-div');
+    }
+
+    if ( menu.hasClass('open') ) {
+        menu.removeClass('open').animate({height: 0}, 200);
+        $(this).removeClass('open');
+    } else {
+        menu.addClass('open').animate({height: $(menu)[0].scrollHeight}, 200);
+        $(this).addClass('open');
+    }
+});
 /*************************************************************/
 /*************************************************************/
 /*************************************************************/

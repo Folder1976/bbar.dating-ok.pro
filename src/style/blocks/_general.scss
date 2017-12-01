@@ -137,6 +137,10 @@ textarea:focus, input:focus{
         background: #e0ad77;
         text-transform: uppercase;
     }
+    &--show-contact-form {
+        background: #393939;
+        font-size: 16px;
+    }
 }
 
 
@@ -164,13 +168,22 @@ textarea:focus, input:focus{
 }
 
 .collapse {
-    transition: all 300ms;
+    // transition: all 300ms;
     height: 0;
-    display: none;
-    &.in {
-        transition: all 300ms;
-        display: block;
-        height: auto;
+    // display: none;
+    overflow: hidden;
+    &.open {
+        // transition: all 300ms;
+        // display: block;
+        // height: auto;
+    }
+    &-dropdown-link {
+        .closed-text { display: inline-block; }
+        .opened-text { display: none; }
+        &.open {
+            .closed-text { display: none; }
+            .opened-text { display: inline-block; }
+        }
     }
 }
 
