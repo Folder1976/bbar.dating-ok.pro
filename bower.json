@@ -5,6 +5,7 @@
     "bootstrap-sass": "^3.3.7",
     "font-awesome": "^4.7.0",
     "pure": "^1.0.0",
-    "pure-sass": "^0.0.4"
+    "pure-sass": "^0.0.4",
+    "fancybox": "fancyBox#^3.2.5"
   }
 }

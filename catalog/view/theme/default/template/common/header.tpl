@@ -52,12 +52,12 @@
         <div class="container">
           <div class="row">
             <div class="col-md-2">
-              <span class="phone"><a href="tel:380638732900">+38 063 873 29 00<?php //echo $telephone; ?></a></span>
+              <span class="phone"><a href="tel:<?php echo preg_replace('~[^0-9]+~','',$telephone); ?>"><?php echo $telephone; ?></a></span>
             </div>
             <div class="col-md-8">
               <div class="top-nav">
                 <ul>
-                  <li><a href="#">Регистрация</a>/<a href="#">Вход</a></li>
+                  <li><a href="javascript:void(0)" class="js-open-registration">Регистрация</a>/<a href="javascript:void(0)" class="js-open-authorization">Вход</a></li>
                   <li><a href="#">Оптовикам</a></li>
                   <li><a href="#">Новости</a></li>
                   <li><a href="#">Обучение</a></li>
@@ -107,5 +107,44 @@
     </header>
 
 
+
+
+    <div id="modal-login" style="display: none;">
+      <h2>Регистрация профиля</h2>
+      <form action="">
+        <div class="form-group required">
+          <input type="text" name="name" placeholder="Имя">
+          <?php if (false) { //($error_name) { ?>
+          <div class="text-danger"><?php echo $error_name; ?></div>
+          <?php } ?>
+        </div>
+        <div class="form-group required">
+          <input type="email" name="email" placeholder="E-mail">
+          <?php if (false) { //($error_email) { ?>
+          <div class="text-danger"><?php echo $error_email; ?></div>
+          <?php } ?>
+        </div>
+        <div class="form-group required">
+          <input type="password" namepassword placeholder="Пароль">
+          <?php if (false) { //($error_password) { ?>
+          <div class="text-danger"><?php echo $error_password; ?></div>
+          <?php } ?>
+        </div>
+      </form>
+
+      <p>На ваш E-mail будет отправлено письмо для подтверждения введенн данных.</p>
+
+      <a href="#" class="g-btn g-btn--auth">Создать новый профиль</a>
+
+      <p>Создавая новый профиль, я принимаю условия <a href="#">пользовательского соглашения</a></p>
+
+      <h4>Или регистрируйтесь через социальные сети:</h4>
+      <div class="social-login">
+        <a href="#"><i class="ico-gp-login"></i></a>
+        <a href="#"><i class="ico-fb-login"></i></a>
+        <a href="#"><i class="ico-tw-login"></i></a>
+      </div>
+
+    </div>
 
 

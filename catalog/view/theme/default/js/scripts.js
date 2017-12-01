@@ -69,6 +69,60 @@ $('.js-dropdown-link').on('click', function(){
     }
 });
 /*************************************************************/
+// fancybox
+// $(".fancybox").fancybox();
+
+$('.js-open-registration').on('click', function(){
+    var c = $('#modal-login');
+
+    $.fancybox.open({
+        content: c,
+        type: 'html',
+        padding: 0,
+        margin: 0,
+        autoSize: false,
+        infobar: true,
+        toolbar: true,
+        baseClass: 'fb-modal',
+        // tpl: {
+        //     closeBtn : '<span class="fancybox-close"></span>'
+        // }
+    });
+});
+
+$('.js-open-authorization').on('click', function(){});
+
+$('.js-open-registration').click();
+
+
+// $('.js-login_popup_link').on('click', function(){
+    // var c = $('.js-login_popup');
+
+    // $.fancybox.open({
+    //     content: c,
+    //     type: 'html',
+    //     padding: 0,
+    //     margin: 0,
+    //     autoSize: false,
+    //     width: 300,
+    //     height: 440,
+    //     minHeight: 440,
+    //     wrapCSS: 'b-login-popup',
+    //     tpl: {
+    //         closeBtn : '<span class="fancybox-close"></span>'
+    //     }
+    // });
+
+//     $('.js-login_block').removeClass('h-hidden');
+//     $('.js-registration_block').addClass('h-hidden');
+//     $('.js-login_block-auth-form').removeClass('h-hidden');
+//     $('.js-login_block-forgotten-pass').addClass('h-hidden');
+// });
+// $('.js_show_block').on('click', function(){
+//     $($(this).data('show-block')).removeClass('h-hidden');
+//     $($(this).data('hide-block')).addClass('h-hidden');
+// });
+
 /*************************************************************/
 /*************************************************************/
 /*************************************************************/
