@@ -1663,6 +1663,50 @@ li.fancybox-thumbs-loading {
 .fancybox-is-open .fancybox-bg {
   opacity: .62; }
 
+.modal-account {
+  padding: 26px 50px;
+  max-width: 470px; }
+  .modal-account h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 20px; }
+  .modal-account h4 {
+    color: #010101;
+    font-size: 16px;
+    margin-top: 35px; }
+  .modal-account a {
+    color: #0c559d;
+    border-bottom: 1px dashed;
+    font-size: 13px; }
+    .modal-account a:hover {
+      text-decoration: none; }
+  .modal-account p {
+    font-size: 12px;
+    line-height: 18px; }
+  .modal-account .form-group {
+    margin-bottom: 15px; }
+  .modal-account input[type="text"],
+  .modal-account input[type="email"],
+  .modal-account input[type="password"] {
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    line-height: 24px;
+    padding: 10px;
+    box-sizing: border-box; }
+  .modal-account .g-btn {
+    background: #ccac8b;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 47px; }
+  .modal-account .social-login {
+    padding: 23px 0; }
+    .modal-account .social-login a {
+      border: none;
+      margin-right: 4px; }
+      .modal-account .social-login a:hover {
+        opacity: .7; }
+
 html {
   height: 100%; }
 

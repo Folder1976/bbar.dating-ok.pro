@@ -168,15 +168,9 @@ textarea:focus, input:focus{
 }
 
 .collapse {
-    // transition: all 300ms;
     height: 0;
-    // display: none;
     overflow: hidden;
-    &.open {
-        // transition: all 300ms;
-        // display: block;
-        // height: auto;
-    }
+    &.open {}
     &-dropdown-link {
         .closed-text { display: inline-block; }
         .opened-text { display: none; }

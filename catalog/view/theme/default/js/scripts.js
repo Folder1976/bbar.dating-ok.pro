@@ -70,11 +70,9 @@ $('.js-dropdown-link').on('click', function(){
 });
 /*************************************************************/
 // fancybox
-// $(".fancybox").fancybox();
+// регистрация / авторизация / напоминание пароля
 
-$('.js-open-registration').on('click', function(){
-    var c = $('#modal-login');
-
+function open_modal_account(c) {
     $.fancybox.open({
         content: c,
         type: 'html',
@@ -88,40 +86,37 @@ $('.js-open-registration').on('click', function(){
         //     closeBtn : '<span class="fancybox-close"></span>'
         // }
     });
+}
+
+$('.js-open-registration').on('click', function(){
+    var c = $('#modal-account');
+    c.find('.registratin').css('display', 'block');
+    c.find('.authorization').css('display', 'none');
+    c.find('.remind-password').css('display', 'none');
+    if ( !$('body').hasClass('fancybox-active') ) {
+        open_modal_account(c);
+    }
 });
 
-$('.js-open-authorization').on('click', function(){});
+$('.js-open-authorization').on('click', function(){
+    var c = $('#modal-account');
+    c.find('.registratin').css('display', 'none');
+    c.find('.authorization').css('display', 'block');
+    c.find('.remind-password').css('display', 'none');
+    if ( !$('body').hasClass('fancybox-active') ) {
+        open_modal_account(c);
+    }
+});
 
-$('.js-open-registration').click();
-
-
-// $('.js-login_popup_link').on('click', function(){
-    // var c = $('.js-login_popup');
-
-    // $.fancybox.open({
-    //     content: c,
-    //     type: 'html',
-    //     padding: 0,
-    //     margin: 0,
-    //     autoSize: false,
-    //     width: 300,
-    //     height: 440,
-    //     minHeight: 440,
-    //     wrapCSS: 'b-login-popup',
-    //     tpl: {
-    //         closeBtn : '<span class="fancybox-close"></span>'
-    //     }
-    // });
-
-//     $('.js-login_block').removeClass('h-hidden');
-//     $('.js-registration_block').addClass('h-hidden');
-//     $('.js-login_block-auth-form').removeClass('h-hidden');
-//     $('.js-login_block-forgotten-pass').addClass('h-hidden');
-// });
-// $('.js_show_block').on('click', function(){
-//     $($(this).data('show-block')).removeClass('h-hidden');
-//     $($(this).data('hide-block')).addClass('h-hidden');
-// });
+$('.js-open-remind-password').on('click', function(){
+    var c = $('#modal-account');
+    c.find('.registratin').css('display', 'none');
+    c.find('.authorization').css('display', 'none');
+    c.find('.remind-password').css('display', 'block');
+    if ( !$('body').hasClass('fancybox-active') ) {
+        open_modal_account(c);
+    }
+});
 
 /*************************************************************/
 /*************************************************************/

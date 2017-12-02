@@ -109,42 +109,96 @@
 
 
 
-    <div id="modal-login" style="display: none;">
-      <h2>Регистрация профиля</h2>
-      <form action="">
-        <div class="form-group required">
-          <input type="text" name="name" placeholder="Имя">
-          <?php if (false) { //($error_name) { ?>
-          <div class="text-danger"><?php echo $error_name; ?></div>
-          <?php } ?>
+    <div id="modal-account" class="modal-account" style="display: none;">
+      <div class="registratin">
+        <h2>Регистрация профиля</h2>
+        <form action="">
+          <div class="form-group required">
+            <input type="text" name="name" placeholder="Имя" required >
+            <?php if (false) { //($error_name) { ?>
+            <div class="text-danger"><?php echo $error_name; ?></div>
+            <?php } ?>
+          </div>
+          <div class="form-group required">
+            <input type="email" name="email" placeholder="E-mail" required >
+            <?php if (false) { //($error_email) { ?>
+            <div class="text-danger"><?php echo $error_email; ?></div>
+            <?php } ?>
+          </div>
+          <div class="form-group required">
+            <input type="password" namepassword placeholder="Пароль" required >
+            <?php if (false) { //($error_password) { ?>
+            <div class="text-danger"><?php echo $error_password; ?></div>
+            <?php } ?>
+          </div>
+
+          <p>На ваш E-mail будет отправлено письмо для подтверждения введенн данных.</p>
+
+          <p><input type="submit" class="g-btn" value="Создать новый профиль" style="width: 100%;"></p>
+        </form>
+
+        <p>Создавая новый профиль, я принимаю условия<br><a href="#">пользовательского соглашения</a></p>
+
+        <h4>Или регистрируйтесь через социальные сети:</h4>
+        <div class="social-login">
+          <a href="#"><i class="ico-gp-login"></i></a>
+          <a href="#"><i class="ico-fb-login"></i></a>
+          <a href="#"><i class="ico-tw-login"></i></a>
         </div>
-        <div class="form-group required">
-          <input type="email" name="email" placeholder="E-mail">
-          <?php if (false) { //($error_email) { ?>
-          <div class="text-danger"><?php echo $error_email; ?></div>
-          <?php } ?>
-        </div>
-        <div class="form-group required">
-          <input type="password" namepassword placeholder="Пароль">
-          <?php if (false) { //($error_password) { ?>
-          <div class="text-danger"><?php echo $error_password; ?></div>
-          <?php } ?>
-        </div>
-      </form>
-
-      <p>На ваш E-mail будет отправлено письмо для подтверждения введенн данных.</p>
-
-      <a href="#" class="g-btn g-btn--auth">Создать новый профиль</a>
-
-      <p>Создавая новый профиль, я принимаю условия <a href="#">пользовательского соглашения</a></p>
-
-      <h4>Или регистрируйтесь через социальные сети:</h4>
-      <div class="social-login">
-        <a href="#"><i class="ico-gp-login"></i></a>
-        <a href="#"><i class="ico-fb-login"></i></a>
-        <a href="#"><i class="ico-tw-login"></i></a>
       </div>
 
-    </div>
+
+
+      <div class="authorization">
+        <h2>Вход в личный кабинет</h2>
+
+        <form action="">
+          <div class="form-group required">
+            <input type="email" name="email" placeholder="Ваш E-mail" required >
+            <?php if (false) { //($error_email) { ?>
+            <div class="text-danger"><?php echo $error_email; ?></div>
+            <?php } ?>
+          </div>
+          <div class="form-group required">
+            <input type="password" name="password" placeholder="Пароль" required >
+            <?php if (false) { //($error_password) { ?>
+            <div class="text-danger"><?php echo $error_password; ?></div>
+            <?php } ?>
+          </div>
+
+          <p style="float: left;"><input type="submit" class="g-btn" value="Вход"></p>
+          <p style="margin-left: 165px;"><a href="javascript:void(0)" class="js-open-remind-password">Напомнить пароль</a><br>
+          <a href="javascript:void(0)" class="js-open-registration">Создать новый профиль</a></p>
+        </form>
+
+        <h4>Или войдите, используя социальные сети:</h4>
+        <div class="social-login">
+          <a href="#"><i class="ico-gp-login"></i></a>
+          <a href="#"><i class="ico-fb-login"></i></a>
+          <a href="#"><i class="ico-tw-login"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="remind-password">
+        <h2>Напомнить пароль</h2>
+
+        <form action="">
+          <div class="form-group required">
+            <input type="email" name="email" placeholder="Ваш E-mail" required >
+            <?php if (false) { //($error_email) { ?>
+            <div class="text-danger"><?php echo $error_email; ?></div>
+            <?php } ?>
+          </div>
+
+          <p>Введите адрес почты, который вы указывали при регистрации, на этот адрес отправим пароль.</p>          
+          <p><a href="javascript:void(0)" class="js-open-authorization">Я вспомнил пароль</a> <a href="javascript:void(0)" class="js-open-registration" style="float: right;">Создать новый профиль</a></p>
+
+          <p style="text-align: center;"><input type="submit" class="g-btn" value="Напомнить пароль"></p>
+        </form>
+      </div>
+
+    </div>  <!-- end #modal-account -->
 
 
