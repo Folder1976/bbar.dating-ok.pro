@@ -13,7 +13,7 @@ $public_date = '19.01.2017';
   <div class="row">
     <div id="content" class="content"><?php echo $content_top; ?>
       <h1><?php echo $heading_title; ?></h1>
-      <div class="date"><?php echo $public_date; ?></div>
+      <div class="date" style="display: none;"><?php echo $public_date; ?></div>
       <?php echo $description; ?><?php echo $content_bottom; ?></div>
   </div>
 

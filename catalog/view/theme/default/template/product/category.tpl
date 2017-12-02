@@ -1,7 +1,3 @@
-<?php
-$manufacturer_name = 'Lovely';
-?>
-
 <?php echo $header; ?>
 
 <main class="category">
@@ -73,7 +69,7 @@ $manufacturer_name = 'Lovely';
               <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
               <div>
                 <div class="caption">
-                  <h4><a href="<?php echo $product['href']; ?>"><?php echo $manufacturer_name; ?></a></h4>
+                  <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['manufacturer']; ?></a></h4>
                   <h3><?php echo $product['name']; ?></h3>
                   <?php if ($product['price']) { ?>
                   <?php $price_and_currency = explode('  ', $product['price']); ?>
