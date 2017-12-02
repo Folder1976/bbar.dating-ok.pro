@@ -1,8 +1,5 @@
-<?php 
-
-echo $header;
-?>
-
+<?php echo $header; ?>
+<main class="basket">
 <div class="container">        
 		<div class="row">
 		    <div class="col-md-12">
@@ -40,7 +37,7 @@ echo $header;
 				</div>
 				</div>
 				<div class="form-group col-md-4">
-				    <input type="button" value="<?php echo $button_login; ?>" id="button-login" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" class="btn btn-primary" />
+				    <input type="button" value="<?php echo $button_login; ?>" id="button-login" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" class="g-btn" />
 				    <a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a>
 				</div>
 			      </form>
@@ -602,14 +599,14 @@ echo $header;
 					<?php } else { ?>
 					<div class="buttons">
 					  <div class="pull-right">
-					    <input type="button" value="<?php echo $button_continue; ?>" id="button-payment-method" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" class="btn btn-primary" />
+					    <input type="button" value="<?php echo $button_continue; ?>" id="button-payment-method" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" class="g-btn" />
 					  </div>
 					</div>
 					<?php } ?>
 					
 					<div class="payment clearfix">
 					    <?php if ($payment) echo $payment; else {?>
-					    <input type="button" class="btn btn-primary" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" id="button-register" value="<?php echo $heading_title;?>">
+					    <input type="button" class="g-btn" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" id="button-register" value="<?php echo $heading_title;?>">
 					    <?php }?></div>
 					</div>
 			    </div>
@@ -619,7 +616,7 @@ echo $header;
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
-
+</main>
 
 
 <script type="text/javascript"><!--

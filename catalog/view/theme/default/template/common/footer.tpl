@@ -7,7 +7,7 @@
         <div class="col-md-10">
           <div class="footer-nav">
             <ul>
-              <li><a href="#">Регистрация</a>/<a href="#">Вход</a></li>
+              <li><a href="javascript:void(0)" class="js-open-registration">Регистрация</a>/<a href="javascript:void(0)" class="js-open-authorization">Вход</a></li>
               <li><a href="#">Оптовикам</a></li>
               <li><a href="#">Новости</a></li>
               <li><a href="#">Обучение</a></li>

@@ -2,7 +2,7 @@
   <div class="panel-heading">
     <h4 class="panel-title"><a href="#collapse-shipping" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"><?php echo $heading_title; ?> <i class="fa fa-caret-down"></i></a></h4>
   </div>
-  <div id="collapse-shipping" class="panel-collapse collapse">
+  <div id="collapse-shipping" class="panel-collapse" style="display: none;">
     <div class="panel-body">
       <p><?php echo $text_shipping; ?></p>
       <div class="form-horizontal">
@@ -34,7 +34,7 @@
             <input type="text" name="postcode" value="<?php echo $postcode; ?>" placeholder="<?php echo $entry_postcode; ?>" id="input-postcode" class="form-control" />
           </div>
         </div>
-        <button type="button" id="button-quote" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_quote; ?></button>
+        <button type="button" id="button-quote" data-loading-text="<?php echo $text_loading; ?>" class="g-btn"><?php echo $button_quote; ?></button>
       </div>
       <script type="text/javascript"><!--
 $('#button-quote').on('click', function() {
@@ -106,12 +106,12 @@ $('#button-quote').on('click', function() {
 
 				html += '      </div>';
 				html += '      <div class="modal-footer">';
-				html += '        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo $button_cancel; ?></button>';
+				html += '        <button type="button" class="g-btn" data-dismiss="modal"><?php echo $button_cancel; ?></button>';
 
 				<?php if ($shipping_method) { ?>
-				html += '        <input type="button" value="<?php echo $button_shipping; ?>" id="button-shipping" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" />';
+				html += '        <input type="button" value="<?php echo $button_shipping; ?>" id="button-shipping" data-loading-text="<?php echo $text_loading; ?>" class="g-btn" />';
 				<?php } else { ?>
-				html += '        <input type="button" value="<?php echo $button_shipping; ?>" id="button-shipping" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" disabled="disabled" />';
+				html += '        <input type="button" value="<?php echo $button_shipping; ?>" id="button-shipping" data-loading-text="<?php echo $text_loading; ?>" class="g-btn" disabled="disabled" />';
 				<?php } ?>
 
 				html += '      </div>';

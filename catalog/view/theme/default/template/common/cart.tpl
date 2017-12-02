@@ -1,5 +1,5 @@
 <div id="cart" class="header-cart">
-  <button type="button" data-loading-text="<?php echo $text_loading; ?>" class="header-cart-btn js-dropdown"><span id="cart-total"><i class="ico-cart"></i><span class="cart-name">Моя корзина</span><br><span class="cart-counts">Товаров (0)</span><?php // echo $text_items; ?></span></button>
+  <button type="button" data-loading-text="<?php echo $text_loading; ?>" class="header-cart-btn js-dropdown"><span id="cart-total"><i class="ico-cart"></i><span class="cart-name">Моя корзина</span><br><span class="cart-counts"><?php  echo $text_items; ?></span></button>
   <ul class="dropdown-menu pull-right">
     <?php if ($products || $vouchers) { ?>
     <li>
@@ -22,7 +22,7 @@
             <?php } ?></td>
           <td class="text-right">x <?php echo $product['quantity']; ?></td>
           <td class="text-right"><?php echo $product['total']; ?></td>
-          <td class="text-center"><button type="button" onclick="cart.remove('<?php echo $product['cart_id']; ?>');" title="<?php echo $button_remove; ?>" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button></td>
+          <td class="text-center"><button type="button" onclick="cart.remove('<?php echo $product['cart_id']; ?>');" title="<?php echo $button_remove; ?>" class="g-btn g-btn--remove"><i class="fa fa-times"></i></button></td>
         </tr>
         <?php } ?>
         <?php foreach ($vouchers as $voucher) { ?>
@@ -46,7 +46,7 @@
           </tr>
           <?php } ?>
         </table>
-        <p class="text-right"><a href="<?php echo $cart; ?>"><strong><i class="fa fa-shopping-cart"></i> <?php echo $text_cart; ?></strong></a>&nbsp;&nbsp;&nbsp;<a href="<?php echo $checkout; ?>"><strong><i class="fa fa-share"></i> <?php echo $text_checkout; ?></strong></a></p>
+        <p class="text-right"><a href="<?php echo $cart; ?>" class="g-btn"><strong><i class="fa fa-shopping-cart"></i> <?php echo $text_cart; ?></strong></a>&nbsp;&nbsp;&nbsp;<a href="<?php echo $checkout; ?>" class="g-btn"><strong><i class="fa fa-share"></i> <?php echo $text_checkout; ?></strong></a></p>
       </div>
     </li>
     <?php } else { ?>
