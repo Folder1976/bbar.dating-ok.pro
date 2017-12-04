@@ -2053,6 +2053,18 @@ legend {
   .alert.alert-danger {
     color: #a94442;
     background-color: #f2dede; }
+  .alert.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8; }
+  .alert .close {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    float: right;
+    font-weight: bold;
+    cursor: pointer; }
+    .alert .close:hover {
+      opacity: .7; }
 
 .panel {
   margin-bottom: 30px; }

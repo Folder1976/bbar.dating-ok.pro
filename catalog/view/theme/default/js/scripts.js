@@ -124,7 +124,7 @@ $('.panel-title').on('click', function(){
 
 /*************************************************************/
 // закрывает алерты
-$('button.close').on('click', function(){
+$('body').on('click', '.alert .close', function(){
     var d = $(this).data('dismiss');
     $('.'+d).remove();
 });

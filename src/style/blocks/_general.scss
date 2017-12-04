@@ -259,6 +259,19 @@ legend {
         color: #a94442;
         background-color: #f2dede;
     }
+    &.alert-success {
+        color: #3c763d;
+        background-color: #dff0d8;
+    }
+    .close {
+        background: transparent;
+        border: 0;
+        color: inherit;
+        float: right;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover { opacity: .7; }
+    }
 }
 
 .panel { margin-bottom: 30px; }

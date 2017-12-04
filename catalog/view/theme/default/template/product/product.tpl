@@ -13,6 +13,8 @@ $special_price_and_currency = explode('  ', $special);
     <?php } ?>
   </ul>
 
+  <div id="alert"></div>
+
   <div class="row">
     <div class="col-md-6">
       <div class="prod-foto">

@@ -7,6 +7,9 @@
     <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
     <?php } ?>
   </ul>
+
+  <div id="alert"></div>
+
   <h2><?php echo $heading_title; ?></h2>
 </div>
 
@@ -116,7 +119,7 @@
       </div>
       <div class="row products-bottom">
         <div class="col-sm-4"></div>
-        <div class="col-sm-4"><a href="#" class="g-btn g-btn--more-prod">Больше товаров</a></div>
+        <!-- <div class="col-sm-4"><a href="#" class="g-btn g-btn--more-prod">Больше товаров</a></div> -->
         <div class="col-sm-4 text-right"><?php echo $pagination; ?></div>
       </div>
       <?php } else { ?>

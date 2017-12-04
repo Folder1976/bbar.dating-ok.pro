@@ -1,10 +1,13 @@
 <?php echo $header; ?>
+<main>
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
     <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
     <?php } ?>
   </ul>
+
+  <div id="alert"></div>
   <?php if ($success) { ?>
   <div class="alert alert-success"><i class="fa fa-check-circle"></i> <?php echo $success; ?>
     <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -131,18 +134,19 @@
         <tr>
           <td></td>
           <?php foreach ($products as $product) { ?>
-          <td><input type="button" value="<?php echo $button_cart; ?>" class="btn btn-primary btn-block" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');" />
-            <a href="<?php echo $product['remove']; ?>" class="btn btn-danger btn-block"><?php echo $button_remove; ?></a></td>
+          <td><input type="button" value="<?php echo $button_cart; ?>" class="g-btn btn-primary btn-block" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');" />
+            <a href="<?php echo $product['remove']; ?>" class="g-btn btn-danger btn-block"><?php echo $button_remove; ?></a></td>
           <?php } ?>
         </tr>
       </table>
       <?php } else { ?>
       <p><?php echo $text_empty; ?></p>
       <div class="buttons">
-        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-default"><?php echo $button_continue; ?></a></div>
+        <div class="pull-right"><a href="<?php echo $continue; ?>" class="g-btn btn-default"><?php echo $button_continue; ?></a></div>
       </div>
       <?php } ?>
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+</main>
 <?php echo $footer; ?>
