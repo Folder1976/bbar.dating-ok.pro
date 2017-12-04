@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<main>
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -71,7 +72,7 @@
             <label class="col-sm-2 control-label" for="input-date-ordered"><?php echo $entry_date_ordered; ?></label>
             <div class="col-sm-3">
               <div class="input-group date"><input type="text" name="date_ordered" value="<?php echo $date_ordered; ?>" placeholder="<?php echo $entry_date_ordered; ?>" data-date-format="YYYY-MM-DD" id="input-date-ordered" class="form-control" /><span class="input-group-btn">
-                <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+                <button type="button" class="g-btn btn-default"><i class="fa fa-calendar"></i></button>
                 </span></div>
             </div>
           </div>
@@ -154,21 +155,21 @@
         </fieldset>
         <?php if ($text_agree) { ?>
         <div class="buttons clearfix">
-          <div class="pull-left"><a href="<?php echo $back; ?>" class="btn btn-danger"><?php echo $button_back; ?></a></div>
+          <div class="pull-left"><a href="<?php echo $back; ?>" class="g-btn btn-danger"><?php echo $button_back; ?></a></div>
           <div class="pull-right"><?php echo $text_agree; ?>
             <?php if ($agree) { ?>
             <input type="checkbox" name="agree" value="1" checked="checked" />
             <?php } else { ?>
             <input type="checkbox" name="agree" value="1" />
             <?php } ?>
-            <input type="submit" value="<?php echo $button_submit; ?>" class="btn btn-primary" />
+            <input type="submit" value="<?php echo $button_submit; ?>" class="g-btn btn-primary" />
           </div>
         </div>
         <?php } else { ?>
         <div class="buttons clearfix">
-          <div class="pull-left"><a href="<?php echo $back; ?>" class="btn btn-default"><?php echo $button_back; ?></a></div>
+          <div class="pull-left"><a href="<?php echo $back; ?>" class="g-btn btn-default"><?php echo $button_back; ?></a></div>
           <div class="pull-right">
-            <input type="submit" value="<?php echo $button_submit; ?>" class="btn btn-primary" />
+            <input type="submit" value="<?php echo $button_submit; ?>" class="g-btn btn-primary" />
           </div>
         </div>
         <?php } ?>
@@ -176,6 +177,7 @@
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+</main>
 <script type="text/javascript"><!--
 $('.date').datetimepicker({
 	pickTime: false

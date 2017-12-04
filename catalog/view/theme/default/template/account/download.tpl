@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<main>
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -34,7 +35,7 @@
             <td class="text-left"><?php echo $download['name']; ?></td>
             <td class="text-left"><?php echo $download['size']; ?></td>
             <td class="text-left"><?php echo $download['date_added']; ?></td>
-            <td><a href="<?php echo $download['href']; ?>" data-toggle="tooltip" title="<?php echo $button_download; ?>" class="btn btn-primary"><i class="fa fa-cloud-download"></i></a></td>
+            <td><a href="<?php echo $download['href']; ?>" data-toggle="tooltip" title="<?php echo $button_download; ?>" class="g-btn btn-primary"><i class="fa fa-cloud-download"></i></a></td>
           </tr>
           <?php } ?>
         </tbody>
@@ -48,9 +49,10 @@
       <p><?php echo $text_empty; ?></p>
       <?php } ?>
       <div class="buttons clearfix">
-        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
+        <div class="pull-right"><a href="<?php echo $continue; ?>" class="g-btn btn-primary"><?php echo $button_continue; ?></a></div>
       </div>
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+</main>
 <?php echo $footer; ?>

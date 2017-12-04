@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<main>
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -92,9 +93,9 @@
               <td class="text-right"><?php echo $product['price']; ?></td>
               <td class="text-right"><?php echo $product['total']; ?></td>
               <td class="text-right" style="white-space: nowrap;"><?php if ($product['reorder']) { ?>
-                <a href="<?php echo $product['reorder']; ?>" data-toggle="tooltip" title="<?php echo $button_reorder; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></a>
+                <a href="<?php echo $product['reorder']; ?>" data-toggle="tooltip" title="<?php echo $button_reorder; ?>" class="g-btn btn-primary"><i class="fa fa-shopping-cart"></i></a>
                 <?php } ?>
-                <a href="<?php echo $product['return']; ?>" data-toggle="tooltip" title="<?php echo $button_return; ?>" class="btn btn-danger"><i class="fa fa-reply"></i></a></td>
+                <a href="<?php echo $product['return']; ?>" data-toggle="tooltip" title="<?php echo $button_return; ?>" class="g-btn btn-danger"><i class="fa fa-reply"></i></a></td>
             </tr>
             <?php } ?>
             <?php foreach ($vouchers as $voucher) { ?>
@@ -166,9 +167,10 @@
       </table>
       <?php } ?>
       <div class="buttons clearfix">
-        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
+        <div class="pull-right"><a href="<?php echo $continue; ?>" class="g-btn btn-primary"><?php echo $button_continue; ?></a></div>
       </div>
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+</main>
 <?php echo $footer; ?>

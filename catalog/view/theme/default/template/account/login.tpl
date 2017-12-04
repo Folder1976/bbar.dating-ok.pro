@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<main>
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -26,7 +27,7 @@
             <h2><?php echo $text_new_customer; ?></h2>
             <p><strong><?php echo $text_register; ?></strong></p>
             <p><?php echo $text_register_account; ?></p>
-            <a href="<?php echo $register; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
+            <a href="<?php echo $register; ?>" class="g-btn btn-primary"><?php echo $button_continue; ?></a></div>
         </div>
         <div class="col-sm-6">
           <div class="well">
@@ -41,7 +42,7 @@
                 <label class="control-label" for="input-password"><?php echo $entry_password; ?></label>
                 <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
                 <a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a></div>
-              <input type="submit" value="<?php echo $button_login; ?>" class="btn btn-primary" />
+              <input type="submit" value="<?php echo $button_login; ?>" class="g-btn btn-primary" />
               <?php if ($redirect) { ?>
               <input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
               <?php } ?>
@@ -52,4 +53,5 @@
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+</main>
 <?php echo $footer; ?>

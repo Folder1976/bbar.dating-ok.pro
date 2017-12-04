@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<main>
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -38,7 +39,7 @@
               <td class="text-left"><?php echo $order['status']; ?></td>
               <td class="text-right"><?php echo $order['total']; ?></td>
               <td class="text-left"><?php echo $order['date_added']; ?></td>
-              <td class="text-right"><a href="<?php echo $order['view']; ?>" data-toggle="tooltip" title="<?php echo $button_view; ?>" class="btn btn-info"><i class="fa fa-eye"></i></a></td>
+              <td class="text-right"><a href="<?php echo $order['view']; ?>" data-toggle="tooltip" title="<?php echo $button_view; ?>" class="g-btn btn-info"><i class="fa fa-eye"></i></a></td>
             </tr>
             <?php } ?>
           </tbody>
@@ -52,9 +53,10 @@
       <p><?php echo $text_empty; ?></p>
       <?php } ?>
       <div class="buttons clearfix">
-        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
+        <div class="pull-right"><a href="<?php echo $continue; ?>" class="g-btn btn-primary"><?php echo $button_continue; ?></a></div>
       </div>
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+</main>
 <?php echo $footer; ?>

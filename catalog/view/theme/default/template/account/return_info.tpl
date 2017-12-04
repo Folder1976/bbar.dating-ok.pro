@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<main>
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -112,9 +113,10 @@
         </table>
       </div>
       <div class="buttons clearfix">
-        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
+        <div class="pull-right"><a href="<?php echo $continue; ?>" class="g-btn btn-primary"><?php echo $button_continue; ?></a></div>
       </div>
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+</main>
 <?php echo $footer; ?>

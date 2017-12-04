@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<main>
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -38,11 +39,12 @@
           </div>
         </fieldset>
         <div class="buttons clearfix">
-          <div class="pull-left"><a href="<?php echo $back; ?>" class="btn btn-default"><?php echo $button_back; ?></a></div>
-          <div class="pull-right"><button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> <?php echo $button_continue; ?></button></div>
+          <div class="pull-left"><a href="<?php echo $back; ?>" class="g-btn btn-default"><?php echo $button_back; ?></a></div>
+          <div class="pull-right"><button type="submit" class="g-btn btn-primary"><i class="fa fa-save"></i> <?php echo $button_continue; ?></button></div>
         </div>
       </form>
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+</main>
 <?php echo $footer; ?>

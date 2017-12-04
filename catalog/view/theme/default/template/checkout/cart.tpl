@@ -74,7 +74,7 @@
                   <?php } ?></td>
                 <td class="text-left"><?php echo $product['model']; ?></td>
                 <td class="text-left"><div class="input-group btn-block" style="max-width: 200px;">
-                    <input type="text" name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" class="form-control" />
+                    <input type="text" name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" class="" />
                     <span class="input-group-btn">
                     <button type="submit" data-toggle="tooltip" title="<?php echo $button_update; ?>" class="g-btn g-btn--small"><i class="fa fa-refresh"></i></button>
                     <button type="button" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="g-btn g-btn--small" onclick="cart.remove('<?php echo $product['cart_id']; ?>');"><i class="fa fa-times-circle"></i></button>

@@ -1,6 +1,7 @@
 <?php echo $header; ?>
+<main>
 <div class="container">
-  <ul class="breadcrumb">
+  <ul class="breadcrumb" style="display: none;">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
     <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
     <?php } ?>
@@ -15,7 +16,7 @@
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <h1><?php echo $heading_title; ?></h1>
-      <label class="control-label" for="input-search"><?php echo $entry_search; ?></label>
+      <label class="control-label" for="input-search"><?php //echo $entry_search; ?></label>
       <div class="row">
         <div class="col-sm-4">
           <input type="text" name="search" value="<?php echo $search; ?>" placeholder="<?php echo $text_keyword; ?>" id="input-search" class="form-control" />
@@ -162,6 +163,7 @@
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+</main>
 <script type="text/javascript"><!--
 $('#button-search').bind('click', function() {
 	url = 'index.php?route=product/search';
