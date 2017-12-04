@@ -42,9 +42,9 @@
             <ul class="list">
               <li><a href="/index.php?route=information/contact">Наши контакты</a></li>
               <li><a href="/about_us">Об интернет-магазине</a></li>
-              <li><a href="#">Почему мы?</a></li>
-              <li><a href="#">Карьера у нас</a></li>
-              <li><a href="#">Блог</a></li>
+              <li><a href="/why_as">Почему мы?</a></li>
+              <li><a href="/Career_with_us">Карьера у нас</a></li>
+              <li><a href="/blog">Блог</a></li>
             </ul>
           </div>
 
@@ -52,10 +52,10 @@
             <div class="title">Помощь</div>
             <ul class="list">
               <li><a href="/delivery">Доставка</a></li>
-              <li><a href="#">Оплата</a></li>
-              <li><a href="#">Возврат</a></li>
-              <li><a href="#">Персональный счет</a></li>
-              <li><a href="#">Вопросы-ответы</a></li>
+              <li><a href="/Payment">Оплата</a></li>
+              <li><a href="/Return">Возврат</a></li>
+              <li><a href="/Personal_account">Персональный счет</a></li>
+              <li><a href="/faq">Вопросы-ответы</a></li>
             </ul>
           </div>
         </div>

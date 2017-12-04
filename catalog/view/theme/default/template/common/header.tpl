@@ -57,7 +57,15 @@
             <div class="col-md-8">
               <div class="top-nav">
                 <ul>
+                <?php if ($logged) { ?>
+                  <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+                  <!--li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li-->
+                  <!--li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li-->
+                  <!--li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li-->
+                  <li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
+                <?php } else { ?>
                   <li><a href="javascript:void(0)" class="js-open-registration">Регистрация</a>/<a href="javascript:void(0)" class="js-open-authorization">Вход</a></li>
+                <?php } ?>
                   <li><a href="#">Оптовикам</a></li>
                   <li><a href="#">Новости</a></li>
                   <li><a href="#">Обучение</a></li>
@@ -112,9 +120,14 @@
     <div id="modal-account" class="modal-account" style="display: none;">
       <div class="registratin">
         <h2>Регистрация профиля</h2>
-        <form action="">
+        <form action="/index.php?route=account/register" method="POST" >
           <div class="form-group required">
-            <input type="text" name="name" placeholder="Имя" required >
+            <input type="text" name="firstname" placeholder="Имя" required >
+            <input type="hidden" name="lastname" placeholder="*" required >
+            <input type="hidden" name="telephone" placeholder="+3" required >
+            <input type="hidden" name="address_1" placeholder="*" required >
+            <input type="hidden" name="city" placeholder="0" required >
+            <input type="hidden" name="country_id" placeholder="176" required >
             <?php if (false) { //($error_name) { ?>
             <div class="text-danger"><?php echo $error_name; ?></div>
             <?php } ?>
@@ -126,7 +139,7 @@
             <?php } ?>
           </div>
           <div class="form-group required">
-            <input type="password" namepassword placeholder="Пароль" required >
+            <input type="password" name="password" placeholder="Пароль" required >
             <?php if (false) { //($error_password) { ?>
             <div class="text-danger"><?php echo $error_password; ?></div>
             <?php } ?>
@@ -139,12 +152,12 @@
 
         <p>Создавая новый профиль, я принимаю условия<br><a href="#">пользовательского соглашения</a></p>
 
-        <h4>Или регистрируйтесь через социальные сети:</h4>
+        <!--h4>Или регистрируйтесь через социальные сети:</h4>
         <div class="social-login">
           <a href="#"><i class="ico-gp-login"></i></a>
           <a href="#"><i class="ico-fb-login"></i></a>
           <a href="#"><i class="ico-tw-login"></i></a>
-        </div>
+        </div-->
       </div>
 
 
@@ -152,7 +165,7 @@
       <div class="authorization">
         <h2>Вход в личный кабинет</h2>
 
-        <form action="">
+        <form action="/index.php?route=account/login" method="POST">
           <div class="form-group required">
             <input type="email" name="email" placeholder="Ваш E-mail" required >
             <?php if (false) { //($error_email) { ?>
@@ -171,12 +184,12 @@
           <a href="javascript:void(0)" class="js-open-registration">Создать новый профиль</a></p>
         </form>
 
-        <h4>Или войдите, используя социальные сети:</h4>
+        <!--h4>Или войдите, используя социальные сети:</h4>
         <div class="social-login">
           <a href="#"><i class="ico-gp-login"></i></a>
           <a href="#"><i class="ico-fb-login"></i></a>
           <a href="#"><i class="ico-tw-login"></i></a>
-        </div>
+        </div-->
       </div>
 
 
@@ -184,7 +197,7 @@
       <div class="remind-password">
         <h2>Напомнить пароль</h2>
 
-        <form action="">
+        <form action="/index.php?route=account/forgotten" method="POST">
           <div class="form-group required">
             <input type="email" name="email" placeholder="Ваш E-mail" required >
             <?php if (false) { //($error_email) { ?>

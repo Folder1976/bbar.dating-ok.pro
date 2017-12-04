@@ -123,6 +123,12 @@ class ControllerCommonHeader extends Controller {
 			}
 		}
 
+		
+		$data['action'] = $this->url->link('account/login', '', true);
+		$data['register'] = $this->url->link('account/register', '', true);
+		$data['forgotten'] = $this->url->link('account/forgotten', '', true);
+
+		
 		$data['language'] = $this->load->controller('common/language');
 		$data['currency'] = $this->load->controller('common/currency');
 		$data['search'] = $this->load->controller('common/search');
