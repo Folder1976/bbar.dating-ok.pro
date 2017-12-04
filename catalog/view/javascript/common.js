@@ -210,10 +210,10 @@ var cart = {
 			data: 'key=' + key,
 			dataType: 'json',
 			beforeSend: function() {
-				$('#cart > button').button('loading');
+				// $('#cart > button').button('loading');
 			},
 			complete: function() {
-				$('#cart > button').button('reset');
+				// $('#cart > button').button('reset');
 			},
 			success: function(json) {
 				// Need to set timeout otherwise it wont update the total

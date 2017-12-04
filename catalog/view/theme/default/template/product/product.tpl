@@ -438,10 +438,10 @@ $('#button-cart').on('click', function() {
 		data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
 		dataType: 'json',
 		beforeSend: function() {
-			$('#button-cart').button('loading');
+			$('#button-cart').html('loading');
 		},
 		complete: function() {
-			$('#button-cart').button('reset');
+			$('#button-cart').html('<?php echo $button_cart; ?>');
 		},
 		success: function(json) {
 			$('.alert, .text-danger').remove();
@@ -524,10 +524,10 @@ $('button[id^=\'button-upload\']').on('click', function() {
 				contentType: false,
 				processData: false,
 				beforeSend: function() {
-					$(node).button('loading');
+					$(node).html('loading');
 				},
 				complete: function() {
-					$(node).button('reset');
+					$(node).html('reset');
 				},
 				success: function(json) {
 					$('.text-danger').remove();
@@ -570,10 +570,10 @@ $('#button-review').on('click', function() {
 		dataType: 'json',
 		data: $("#form-review").serialize(),
 		beforeSend: function() {
-			$('#button-review').button('loading');
+			$('#button-review').html('loading');
 		},
 		complete: function() {
-			$('#button-review').button('reset');
+			$('#button-review').html('<?php echo $button_continue; ?>');
 		},
 		success: function(json) {
 			$('.alert-success, .alert-danger').remove();
@@ -593,14 +593,14 @@ $('#button-review').on('click', function() {
 	});
 });
 
-$(document).ready(function() {
-	$('.thumbnails').magnificPopup({
-		type:'image',
-		delegate: 'a',
-		gallery: {
-			enabled:true
-		}
-	});
-});
+// $(document).ready(function() {
+// 	$('.thumbnails').magnificPopup({
+// 		type:'image',
+// 		delegate: 'a',
+// 		gallery: {
+// 			enabled:true
+// 		}
+// 	});
+// });
 //--></script>
 <?php echo $footer; ?>

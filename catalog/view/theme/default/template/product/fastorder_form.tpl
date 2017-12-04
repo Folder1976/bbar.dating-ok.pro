@@ -67,12 +67,10 @@
                 </div>
             </div>
             <div class="modal-footer">
+                <h4><?php echo $text_fastorder_mail_msg_order;?>: </h4>
                 <ul style="list-style: none; margin-bootm:0; padding-left: 0;">
-                    <li><?php echo $text_fastorder_mail_msg_order;?>: <strong style="color: #000;"><?php echo htmlspecialchars_decode($product_name); ?></strong></li>
+                    <li><?php echo htmlspecialchars_decode($product_name); ?></li>
                     <li>
-                        <span style="float: left; font-size: 11px; margin: 0;">
-                            <a href="http://tauweb.ru/products/81-pokupka-v-odin-klik-dlya-opencart-bystryj-zakaz.html" title="FastOrder Button">FastOrder</a>
-                        </span>
                         <?php echo $text_fastorder_mail_msg_price;?>: <strong><?php echo $symbolLeft;?></strong><strong id="total-price<?php echo $product_id;?>"><?php echo $price;?></strong><strong><?php echo $symbolRight;?></strong>
                     </li>
 
