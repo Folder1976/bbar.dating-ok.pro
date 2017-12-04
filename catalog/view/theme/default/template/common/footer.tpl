@@ -133,6 +133,20 @@ Please donate via PayPal to donate@opencart.com
           },
           success: function(result) {
             $('#fastorder-form-container'+data['product_id']).html(result);
+
+            $('#fastorder-success'+data['product_id']).hide();
+
+            var c = $('#bs-fastorder'+data['product_id']);
+            $.fancybox.open({
+              content: c,
+              type: 'html',
+              padding: 0,
+              margin: 0,
+              autoSize: false,
+              infobar: true,
+              toolbar: true,
+              baseClass: 'fb-modal',
+            });
           },
           error: function(xhr, ajaxOptions, thrownError) {
             alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);

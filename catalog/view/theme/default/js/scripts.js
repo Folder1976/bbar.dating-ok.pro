@@ -82,9 +82,6 @@ function open_modal_account(c) {
         infobar: true,
         toolbar: true,
         baseClass: 'fb-modal',
-        // tpl: {
-        //     closeBtn : '<span class="fancybox-close"></span>'
-        // }
     });
 }
 

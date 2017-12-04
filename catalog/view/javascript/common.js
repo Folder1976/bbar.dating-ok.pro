@@ -131,7 +131,7 @@ $(document).ready(function() {
 
 	// Makes tooltips work on ajax generated content
 	$(document).ajaxStop(function() {
-		$('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
+		// $('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
 	});
 });
 

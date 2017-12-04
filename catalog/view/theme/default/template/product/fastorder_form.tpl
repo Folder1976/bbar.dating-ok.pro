@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <!-- <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close" onclick="$.fancybox.close( true );"><span aria-hidden="true">&times;</span></button> -->
                 <h1 style="text-align: center;" class="modal-title" id="bs-fastorderLabel"><?php echo $text_fastorder_form_header;?></h1>
             </div>
             <div class="modal-body">
@@ -55,8 +55,8 @@
                          </select>
                         </div>
 
-                        <button style="width: 100%" type="submit" id="btn_submit<?php echo $product_id;?>" class="btn btn-success btn-lg"><?php echo $text_fastorder_button_submit;?></button>
-                        <!-- <button style="float:right; margin: 10px;" type="button" class=" btn btn-danger btn-lg" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><?php echo $text_fastorder_button_cancel;?></span></button> -->
+                        <button style="width: 100%" type="submit" id="btn_submit<?php echo $product_id;?>" class="g-btn btn-success btn-lg"><?php echo $text_fastorder_button_submit;?></button>
+                        <!-- <button style="float:right; margin: 10px;" type="button" class=" g-btn btn-danger btn-lg" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><?php echo $text_fastorder_button_cancel;?></span></button> -->
                         <div id="tt" class="form-group">
                             <label for="txta_comment"></label>
                             <input class="form-control" style="display:none" id="product_name<?php echo $product_id;?>" name="product_name<?php echo $product_id;?>" value="<?php echo $product_name;?>">
@@ -90,14 +90,14 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$.fancybox.close( true );"><span aria-hidden="true">&times;</span></button> -->
                 <h4 class="modal-title"><?php echo $text_fastorder_success_title;?></h4>
             </div>
             <div class="modal-body">
                 <?php echo $text_fastorder_success_message;?>
             </div>
             <div class="modal-footer" style="text-align: center;">
-                <button type="button"  class="btn btn-default btn-success" data-dismiss="modal"><?php echo $text_fastorder_button_close;?></button>
+                <button type="button"  class="g-btn btn-default btn-success" data-dismiss="modal" onclick="$.fancybox.close( true );"><?php echo $text_fastorder_button_close;?></button>
             </div>
         </div>
     </div>
@@ -109,7 +109,7 @@
         $('#total-price<?php echo $product_id;?>').text(val*<?php echo $price;?>)
     }
 
-    $('#bs-fastorder<?php echo $product_id?>').modal('show');
+    // $('#bs-fastorder<?php echo $product_id?>').modal('show');
     $('#btn_submit<?php echo $product_id;?>').on('click', function() {
 
         // Form fill variables
@@ -149,10 +149,24 @@
             },
             complete: function() {
                 $('#error-msg').hide();
-                $('#bs-fastorder<?php echo $product_id;?>').modal('hide');
+                $('#wait-msg').hide();
+                // $('#bs-fastorder<?php echo $product_id;?>').modal('hide');
             },
             success: function(json) {
-                $('#fastorder-success<?php echo $product_id;?>').modal('show');
+                $.fancybox.close( true );
+                // $('#fastorder-success<?php echo $product_id;?>').modal('show');
+
+                var c = $('#fastorder-success<?php echo $product_id;?>');
+                $.fancybox.open({
+                    content: c,
+                    type: 'html',
+                    padding: 0,
+                    margin: 0,
+                    autoSize: false,
+                    infobar: true,
+                    toolbar: true,
+                    baseClass: 'fb-modal',
+                });
             },
             error: function(xhr, ajaxOptions, thrownError) {
                 alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
