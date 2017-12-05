@@ -24,6 +24,7 @@
         &-input {
             border: 0;
             line-height: initial;
+            width: calc(100% - 36px);
         }
         &-btn {
             background-color: transparent;
@@ -181,4 +182,5 @@
             }
         }
     }
+    .cat-nav-toggle { display: none; }
 }

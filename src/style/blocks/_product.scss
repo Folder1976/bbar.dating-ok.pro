@@ -18,6 +18,7 @@
 .prod-foto {
     margin-top: 10px;
     margin-bottom: 40px;
+    min-height: 375px;
     .thumbnails-wrap {
         width: 90px;
         float: left;
@@ -70,6 +71,7 @@
     display: flex;
     justify-content: flex-start;
     margin-bottom: 35px;
+    flex-wrap: wrap;
     li {
         padding: 0 15px 0 0;
         line-height: 21px;
@@ -99,6 +101,7 @@
     border: 1px solid #e5e5e5;
     padding: 10px 10px 0;
     text-align: center;
+    margin-bottom: 20px;
     h2 { margin-bottom: 5px; }
     .price {
         font-size: 31px;

@@ -63,33 +63,41 @@
     <div class="title"><h2>Последние новости</h2></div>
     <div class="container last-news__list">
         <div class="row">
-            <div class="col-md-3">
-                <a href="#">
-                    <img src="/image/news/foto1.jpg" alt="">
-                    <div class="title">Ламинирование ресниц. Почему все страхи - всего лишь миф?</div>
-                </a>
-                <div class="date">19.10.2017</div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="last-news__item">
+                    <a href="#">
+                        <img src="/image/news/foto1.jpg" alt="">
+                        <div class="title">Ламинирование ресниц. Почему все страхи - всего лишь миф?</div>
+                    </a>
+                    <div class="date">19.10.2017</div>
+                </div>
             </div>
-            <div class="col-md-3">
-                <a href="#">
-                    <img src="/image/news/foto2.jpg" alt="">
-                    <div class="title">Правильний уход за нарощенными ресницами</div>
-                </a>
-                <div class="date">19.10.2017</div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="last-news__item">
+                    <a href="#">
+                        <img src="/image/news/foto2.jpg" alt="">
+                        <div class="title">Правильний уход за нарощенными ресницами</div>
+                    </a>
+                    <div class="date">19.10.2017</div>
+                </div>
             </div>
-            <div class="col-md-3">
-                <a href="#">
-                    <img src="/image/news/foto3.jpg" alt="">
-                    <div class="title">Как распознать профессионального бровиста?</div>
-                </a>
-                <div class="date">19.10.2017</div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="last-news__item">
+                    <a href="#">
+                        <img src="/image/news/foto3.jpg" alt="">
+                        <div class="title">Как распознать профессионального бровиста?</div>
+                    </a>
+                    <div class="date">19.10.2017</div>
+                </div>
             </div>
-            <div class="col-md-3">
-                <a href="#">
-                    <img src="/image/news/foto4.jpg" alt="">
-                    <div class="title">Классика или объёмное наращивание?</div>
-                </a>
-                <div class="date">19.10.2017</div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="last-news__item">
+                    <a href="#">
+                        <img src="/image/news/foto4.jpg" alt="">
+                        <div class="title">Классика или объёмное наращивание?</div>
+                    </a>
+                    <div class="date">19.10.2017</div>
+                </div>
             </div>
         </div>
     </div>

@@ -96,7 +96,7 @@ textarea:focus, input:focus{
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 .flex-row {
@@ -145,6 +145,23 @@ textarea:focus, input:focus{
         background: #ec0909;
         padding: 5px;
         line-height: 15px;
+    }
+    &--top-nav-toggle {
+        padding: 10px;
+        line-height: 1em;
+        float: right;
+    }
+    &--cat-nav-toggle {
+        padding: 0 10px;
+        line-height: 50px;
+        float: right;
+        margin-right: 20px;
+    }
+    &--mob-filter {
+        padding: 5px 10px;
+        float: right;
+        margin-right: 5px;
+        display: none;
     }
 }
 
@@ -417,20 +434,22 @@ legend {
         margin-bottom: 40px;
     }
     .container {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
-
     &__list {
         text-align: left;
         .title {
             font-size: 16px;
             line-height: 22px;
+            max-height: 42px;
+            overflow: hidden;
         }
         .date {
             color: #c1c1c1;
             line-height: 31px;
         }
     }
+    &__item { margin-bottom: 20px; }
 }
 
 

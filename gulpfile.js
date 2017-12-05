@@ -114,7 +114,7 @@ gulp.task('style:clean', function () {
 //*****************************
 gulp.task('script:build', function () {
     gulp.src(path.src.js + '*.js')
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream:true}));
 

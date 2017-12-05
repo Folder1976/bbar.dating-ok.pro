@@ -60,7 +60,7 @@ $special_price_and_currency = explode('  ', $special);
         <li style="font-weight: 400;"><?php echo $text_model; ?> <?php echo $model; ?></li>
       </ul>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6 col-md-12 col-sm-6">
 
           <?php if ($price) { ?>
           <div class="price-block">
@@ -104,7 +104,7 @@ $special_price_and_currency = explode('  ', $special);
           <?php } ?>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-lg-6 col-md-12 col-sm-6">
           <div id="product">
             <?php if ($options) { ?>
             <div class="options">

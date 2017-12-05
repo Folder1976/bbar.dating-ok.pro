@@ -10,7 +10,7 @@
 
   <div id="alert"></div>
 
-  <h2><?php echo $heading_title; ?></h2>
+  <h2><?php echo $heading_title; ?><a href="javascript:void(0)" class="g-btn g-btn--mob-filter js-open-mob-filter"><i class="fa fa-filter" aria-hidden="true"></i></a></h2>
 </div>
 
 
@@ -18,7 +18,7 @@
   <div class="flex-row">
 
 
-    <div class="filter-column">
+    <div class="filter-column" id="filter-column">
       <?php if ($categories) { ?>
       <div class="filter-block">
         <h3 class="title js-dropdown-filter open"><?php echo $text_refine; ?></h3>
@@ -166,7 +166,7 @@
   </div>
 
 
-  <div class="row">
+  <div class="">
       <h2>Купить масла для кутикул в Киеве</h2>
       <p>Чем объёмнее наращивание, тем тоньше используемые в нем искусственные ресницы. Это сделано с целью защиты родной ресницы от перегруженности. Поэтому не стоит беспокоиться, что объёмное наращивание повредит Вашим ресницам: их густотой и пышностью можно абсолютно безопасно наслаждаться длительное время.</p>
       <div class="collapse js-full-text">
@@ -182,4 +182,21 @@
 
 </main>
 
+
+
+<script>
+  $('.js-open-mob-filter').on('click', function(){
+    var c = $('#filter-column');
+    $.fancybox.open({
+        content: c,
+        type: 'html',
+        padding: 0,
+        margin: 0,
+        autoSize: false,
+        infobar: true,
+        toolbar: true,
+        baseClass: 'fb-modal',
+    });
+  });
+</script>
 <?php echo $footer; ?>

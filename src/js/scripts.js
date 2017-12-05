@@ -23,6 +23,26 @@ $(document).mouseup(function (e){
     }
 });
 
+
+var cat_nav = $('.header .cat-nav');
+function openCatNav(){
+    cat_nav.addClass('open');
+}
+function closeCatNav(){
+    cat_nav.removeClass('open');
+}
+$('.js-mob-cat-nav').on('click', function(){
+    if ( cat_nav.hasClass('open') ) {
+        closeCatNav();
+    } else {
+        openCatNav();
+    }
+});
+$(document).mouseup(function (e){
+    if ( $(e.target).closest('.js-mob-cat-nav').length === 0 && $(e.target).closest(cat_nav).length === 0 ) {
+        closeCatNav();
+    }
+});
 /*************************************************************/
 // выпадающее меню
 $('.js-dropdown').on('click', function(){

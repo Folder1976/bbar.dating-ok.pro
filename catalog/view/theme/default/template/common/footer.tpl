@@ -4,7 +4,7 @@
   <div class="footer-top">
     <div class="container">
       <div class="row">
-        <div class="col-md-10">
+        <div class="col-sm-9 col-xs-12">
           <div class="footer-nav">
             <ul>
               <li><a href="javascript:void(0)" class="js-open-registration">Регистрация</a>/<a href="javascript:void(0)" class="js-open-authorization">Вход</a></li>
@@ -17,7 +17,7 @@
           </div>
         </div>
 
-        <div class="col-md-2">
+        <div class="col-sm-3 col-xs-12">
           <div class="pay-card">
             <i class="ico-visa-cart"></i><i class="ico-master-cart"></i>
           </div>
@@ -29,14 +29,14 @@
   <div class="footer-bottom">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-lg-4 col-sm-6 col-sx-12">
           <div class="logo">
             <img src="/image/catalog/logo-white.png" alt="">
             <p class="copy">Магазин профкосметики BeautyBar 2017<?php //echo $powered; ?></p>
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-lg-4 visible-lg">
           <div class="footer-menu">
             <div class="title">О компании</div>
             <ul class="list">
@@ -60,7 +60,7 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-lg-4 col-sm-6 col-sx-12">
           <div class="subscribe">
             <p>Подпишитесь и получайте новости об акциях и специальных предложений</p>
             <form action="" class="subscribe-form">
@@ -70,6 +70,36 @@
           </div>
         </div>
 
+      </div>
+    </div>
+
+    <div class="container hidden-lg">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="footer-menu">
+            <div class="title">О компании</div>
+            <ul class="list">
+              <li><a href="/index.php?route=information/contact">Наши контакты</a></li>
+              <li><a href="/about_us">Об интернет-магазине</a></li>
+              <li><a href="/why_as">Почему мы?</a></li>
+              <li><a href="/Career_with_us">Карьера у нас</a></li>
+              <li><a href="/blog">Блог</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-xs-6">
+          <div class="footer-menu">
+            <div class="title">Помощь</div>
+            <ul class="list">
+              <li><a href="/delivery">Доставка</a></li>
+              <li><a href="/Payment">Оплата</a></li>
+              <li><a href="/Return">Возврат</a></li>
+              <li><a href="/Personal_account">Персональный счет</a></li>
+              <li><a href="/faq">Вопросы-ответы</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

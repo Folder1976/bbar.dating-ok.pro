@@ -51,10 +51,10 @@
       <div class="top-line">
         <div class="container">
           <div class="row">
-            <div class="col-md-2">
-              <span class="phone"><a href="tel:<?php echo preg_replace('~[^0-9]+~','',$telephone); ?>"><?php echo $telephone; ?></a></span>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+              <span class="phone"><a href="tel:<?php echo preg_replace('~[^0-9]+~','',$telephone); ?>"><?php echo $telephone; ?></a></span><button class="top-nav-toggle g-btn g-btn--top-nav-toggle js-mob-top-nav"><span><i class="fa fa-bars" aria-hidden="true"></i></span></button>
             </div>
-            <div class="col-md-8">
+            <div class="col-lg-8 col-md-7 col-sm-4">
               <div class="top-nav">
                 <ul>
                 <?php if ($logged) { ?>
@@ -74,7 +74,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-4 col-xs-12">
               <div class="top-searh"><?php echo $search; ?></div>
             </div>
           </div>
@@ -84,10 +84,10 @@
       <div class="middle-line">
         <div class="container">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-sm-3">
               <div class="discount">До 20 октября на продукцию Lovely скидка 5%!</div>
             </div>
-            <div class="col-md-6">
+            <div class="col-sm-6">
               <div class="logo">
                 <?php if ($logo) { ?>
                   <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>"></a>
@@ -96,7 +96,7 @@
                 <?php } ?>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-3">
               <div class="shopping-cart"><?php echo $cart; ?></div>
             </div>
           </div>
@@ -104,13 +104,16 @@
       </div>
 
       <div class="bottom-line">
-        <ul>
-          <?php
-          foreach ($categories as $cat) {
-            echo '<li><a href="'.$cat['href'].'">'.$cat['name'].'</a></li>';
-          }
-          ?>
-        </ul>
+        <button class="cat-nav-toggle g-btn g-btn--cat-nav-toggle js-mob-cat-nav"><span><i class="fa fa-bars" aria-hidden="true"></i></span></button>
+        <div class="cat-nav">
+          <ul>
+            <?php
+            foreach ($categories as $cat) {
+              echo '<li><a href="'.$cat['href'].'">'.$cat['name'].'</a></li>';
+            }
+            ?>
+          </ul>
+        </div>
       </div>
     </header>
 
