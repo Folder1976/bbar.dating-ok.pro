@@ -1879,7 +1879,7 @@ textarea:focus, input:focus {
 
 .ico-badge {
   background-image: url(../image/i/sprite.png);
-  background-position: 0px -129px;
+  background-position: -153px -103px;
   width: 19px;
   height: 19px; }
 
@@ -1897,7 +1897,7 @@ textarea:focus, input:focus {
 
 .ico-checked {
   background-image: url(../image/i/sprite.png);
-  background-position: -153px -52px;
+  background-position: -153px -78px;
   width: 25px;
   height: 25px; }
 
@@ -1945,13 +1945,19 @@ textarea:focus, input:focus {
 
 .ico-house {
   background-image: url(../image/i/sprite.png);
-  background-position: -153px -77px;
+  background-position: -134px -64px;
   width: 19px;
   height: 19px; }
 
+.ico-inst {
+  background-image: url(../image/i/sprite.png);
+  background-position: -153px -26px;
+  width: 26px;
+  height: 26px; }
+
 .ico-like {
   background-image: url(../image/i/sprite.png);
-  background-position: -153px -96px;
+  background-position: 0px -129px;
   width: 19px;
   height: 19px; }
 
@@ -1963,7 +1969,7 @@ textarea:focus, input:focus {
 
 .ico-phone-call {
   background-image: url(../image/i/sprite.png);
-  background-position: -134px -64px;
+  background-position: -19px -129px;
   width: 19px;
   height: 19px; }
 
@@ -1975,7 +1981,7 @@ textarea:focus, input:focus {
 
 .ico-truck {
   background-image: url(../image/i/sprite.png);
-  background-position: -153px -115px;
+  background-position: -134px -98px;
   width: 19px;
   height: 13px; }
 
@@ -1987,7 +1993,7 @@ textarea:focus, input:focus {
 
 .ico-tw {
   background-image: url(../image/i/sprite.png);
-  background-position: -153px -26px;
+  background-position: -153px -52px;
   width: 26px;
   height: 26px; }
 
@@ -2869,6 +2875,7 @@ legend {
         .footer-nav li a:hover {
           text-decoration: none; }
   .footer .pay-card {
+    display: none;
     padding-top: 14px;
     text-align: right; }
     .footer .pay-card i {
