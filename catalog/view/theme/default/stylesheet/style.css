@@ -4554,6 +4554,14 @@ legend {
     left: auto; }
   .header .shopping-cart {
     margin-bottom: 30px; }
+  #cart ul {
+    min-width: auto; }
+  .cart-group-btn {
+    font-size: 0; }
+    .cart-group-btn .g-btn {
+      margin-left: 10px;
+      margin-bottom: 10px;
+      width: 185px; }
   .product-layout.product-grid {
     width: 50%; }
   .sort-line {
@@ -4564,7 +4572,8 @@ legend {
     .sort-line .sort {
       padding-bottom: 10px; }
   .contact-info {
-    text-align: center; }
+    text-align: center;
+    margin-top: 20px; }
   .footer-nav {
     text-align: center;
     padding: 23px 0 0; }

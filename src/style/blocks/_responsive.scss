@@ -159,6 +159,17 @@
         }
         .shopping-cart { margin-bottom: 30px; }
     }
+    #cart ul {
+        min-width: auto;
+    }
+    .cart-group-btn {
+        font-size: 0;
+        .g-btn {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            width: 185px;
+        }
+    }
 
     // Category
     .product-layout.product-grid { width: 50%; }
@@ -170,7 +181,10 @@
     }
 
     // Contact
-    .contact-info { text-align: center; }
+    .contact-info {
+        text-align: center;
+        margin-top: 20px;
+    }
 
     // footer
     .footer-nav {
