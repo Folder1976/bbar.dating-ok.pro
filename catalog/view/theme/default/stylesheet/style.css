@@ -3258,7 +3258,6 @@ textarea:focus, input:focus {
   .g-btn--small {
     padding: 5px 10px; }
   .g-btn--wishlist {
-    display: none;
     background: #e0ad77; }
   .g-btn--compare {
     display: none;
@@ -4554,7 +4553,7 @@ legend {
     right: 20px;
     left: auto; }
   .header .shopping-cart {
-    margin-bottom: 10px; }
+    margin-bottom: 30px; }
   .product-layout.product-grid {
     width: 50%; }
   .sort-line {
