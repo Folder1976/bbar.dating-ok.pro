@@ -17,7 +17,7 @@
       <div class="col-sm-4 contact-info">
         <address><i class="ico-house"></i><span><?php echo $address; ?></span></address>
         <div><i class="ico-phone-call"></i><span><a href="tel:<?php echo preg_replace('~[^0-9]+~','',$telephone); ?>"><?php echo $telephone; ?></a></span></div>
-        <div><i class="ico-email"></i><span><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></span></div>
+        <div><i class="ico-email"></i><span><a href="mailto:<?php echo $config_email; ?>"><?php echo $config_email; ?></a></span></div>
         <div><i class="ico-like"></i><span>odejda</span></div>
         <div style="margin-top: 30px;"><a href="javascript:void(0)" class="g-btn g-btn--show-contact-form collapse-dropdown-link js-dropdown-link" data-toggle="contact-form">Обратная связь</a></div>
       </div>

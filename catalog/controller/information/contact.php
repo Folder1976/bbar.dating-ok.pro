@@ -27,6 +27,8 @@ class ControllerInformationContact extends Controller {
 			$this->response->redirect($this->url->link('information/contact/success'));
 		}
 
+		$data['config_email'] = $this->config->get('config_email');
+		
 		$data['breadcrumbs'] = array();
 
 		$data['breadcrumbs'][] = array(
@@ -88,6 +90,8 @@ class ControllerInformationContact extends Controller {
 			$data['image'] = false;
 		}
 
+		
+		
 		$data['store'] = $this->config->get('config_name');
 		$data['address'] = nl2br($this->config->get('config_address'));
 		$data['geocode'] = $this->config->get('config_geocode');
