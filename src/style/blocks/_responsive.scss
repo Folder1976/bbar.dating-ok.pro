@@ -52,7 +52,10 @@
             }
         }
 
-        .bottom-line { background-color: transparent; }
+        .bottom-line {
+            background-color: transparent;
+            opacity: 1;
+        }
         .cat-nav-toggle { display: block; }
         .cat-nav {
             display: none;

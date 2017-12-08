@@ -4454,7 +4454,8 @@ legend {
         .header .top-nav.open li.active a {
           color: #f6be82; }
   .header .bottom-line {
-    background-color: transparent; }
+    background-color: transparent;
+    opacity: 1; }
   .header .cat-nav-toggle {
     display: block; }
   .header .cat-nav {
