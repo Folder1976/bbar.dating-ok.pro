@@ -1,0 +1,16 @@
+@import "../../../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar";
+
+.mCSB_scrollTools .mCSB_draggerRail {
+    width: 3px;
+    border-radius: 0;
+    background: #e3e3e3;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 3px;
+    border-radius: 0;
+    background-color: #f6be82;
+    &:hover { background-color: #f6be82; }
+}
+
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar { background-color: #f6be82; }

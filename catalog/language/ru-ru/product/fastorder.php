@@ -1,6 +1,6 @@
 <?php
 // Button
-$_['text_fastorder_button'] = 'Заказать в один клик';
+$_['text_fastorder_button'] = 'В один клик';
 
 // Form
 $_['text_fastorder_form_header'] = 'Форма заказа в один клик';

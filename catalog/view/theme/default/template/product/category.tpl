@@ -103,7 +103,7 @@
                 </div>
                 <div class="button-group">
                   <!-- Button fastorder -->
-                    <div class="button-gruop">
+                    <div class="button-gruop" style="display: none;">
                       <?php echo $product['fastorder']; ?>
                     </div>
                   <!-- END :  button fastorder -->

@@ -129,10 +129,17 @@ textarea:focus, input:focus{
     &--buy {
         background: #68c23e;
         font-size: 19px;
+        width: 165px;
     }
     &--small { padding: 5px 10px; }
-    &--wishlist { background: #e0ad77;}
-    &--compare { background: #e0ad77;}
+    &--wishlist {
+        display: none;
+        background: #e0ad77;
+    }
+    &--compare {
+        display: none;
+        background: #e0ad77;
+    }
     &--more-prod {
         background: #e0ad77;
         text-transform: uppercase;
@@ -153,7 +160,7 @@ textarea:focus, input:focus{
     }
     &--cat-nav-toggle {
         padding: 0 10px;
-        line-height: 50px;
+        line-height: 35px;
         float: right;
         margin-right: 20px;
     }
@@ -162,6 +169,7 @@ textarea:focus, input:focus{
         float: right;
         margin-right: 5px;
         display: none;
+        line-height: 25px;
     }
 }
 
