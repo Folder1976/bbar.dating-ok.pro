@@ -630,10 +630,10 @@ $(document).delegate('#button-login', 'click', function() {
         data: $('.login-form :input'),
         dataType: 'json',
         beforeSend: function() {
-        	$('#button-login').button('loading');
+        	// $('#button-login').button('loading');
 		},  
         complete: function() {
-            $('#button-login').button('reset');
+            // $('#button-login').button('reset');
         },              
         success: function(json) {
             $('.alert, .text-danger').remove();
@@ -663,10 +663,10 @@ $(document).delegate('#button-register', 'click', function()
         data: data,
         dataType: 'json',
         beforeSend: function() {
-			$('#button-register').button('loading');
+			//$('#button-register').button('loading');
 		},  
         complete: function() {
-            $('#button-register').button('reset');
+            //$('#button-register').button('reset');
         },          
         success: function(json) {
             $('.alert, .text-danger').remove();
