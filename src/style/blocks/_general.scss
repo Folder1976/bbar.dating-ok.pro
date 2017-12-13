@@ -240,6 +240,9 @@ textarea:focus, input:focus{
     }
 }
 
+.list-unstyled {
+    margin-bottom: 40px;
+}
 
 
 
@@ -460,8 +463,15 @@ legend {
 }
 
 
+/* account */
+.account-account main {
+    margin-bottom: 60px;
+}
 
 
+[class*="account-"] table {
+    margin-bottom: 10px;
+}
 
 
 

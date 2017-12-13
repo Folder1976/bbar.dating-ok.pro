@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <!-- <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close" onclick="$.fancybox.close( true );"><span aria-hidden="true">&times;</span></button> -->
-                <h1 style="text-align: center;" class="modal-title" id="bs-fastorderLabel"><?php echo $text_fastorder_form_header;?></h1>
+                <h2 style="text-align: center;" class="modal-title" id="bs-fastorderLabel"><?php echo $text_fastorder_form_header;?></h2>
             </div>
             <div class="modal-body">
                 <div role="form" id="fastorder">
@@ -22,24 +22,24 @@
                         </div>
 
                         <div class="form-group input-group-sm">
-                            <label for="txt_name"><?php echo $text_fastorder_name;?>*</label>
-                            <input type="text" class="form-control" id="name<?php echo $product_id;?>" name="name<?php echo $product_id;?>" placeholder="<?php echo $text_fastorder_input_name_placeholder;?>" required autofocus value="<?php if(isset($username)){echo $username;}?>">
+                           <!--  <label for="txt_name"><?php echo $text_fastorder_name;?>*</label> -->
+                            <input type="text" class="form-control" id="name<?php echo $product_id;?>" name="name<?php echo $product_id;?>" placeholder="<?php echo $text_fastorder_input_name_placeholder;?>*" required autofocus value="<?php if(isset($username)){echo $username;}?>">
                         </div>
                         <div class="form-group input-group-sm">
-                            <label for="txt_phone"><?php echo $text_fastorder_phone;?>*</label>
-                            <input type="tel" class="form-control" id="phone<?php echo $product_id;?>" name="phone<?php echo $product_id;?>" placeholder="<?php echo $text_fastorder_input_phone_placeholder;?>" required value="<?php if(isset($telephone)){echo $telephone;}?>">
+                            <!-- <label for="txt_phone"><?php echo $text_fastorder_phone;?>*</label> -->
+                            <input type="tel" class="form-control" id="phone<?php echo $product_id;?>" name="phone<?php echo $product_id;?>" placeholder="<?php echo $text_fastorder_input_phone_placeholder;?>*" required value="<?php if(isset($telephone)){echo $telephone;}?>">
                         </div>
                         <div class="form-group input-group-sm">
-                            <label for="txt_mail">Email</label>
+                            <!-- <label for="txt_mail">Email</label> -->
                             <input type="email" class="form-control" id="mail<?php echo $product_id;?>" name="mail<?php echo $product_id;?>" placeholder="<?php echo $text_fastorder_input_mail_placeholder;?>" required value="<?php if(isset($email)){echo $email;}?>">
                         </div>
                         <div class="form-group input-group-sm">
-                            <label for="txta_comment"><?php echo $text_fastorder_comment;?></label>
+                            <!-- <label for="txta_comment"><?php echo $text_fastorder_comment;?></label> -->
                             <textarea class="form-control" id="comment<?php echo $product_id;?>" name="comment<?php echo $product_id;?>" rows="3" placeholder="<?php echo $text_fastorder_input_comment_placeholder;?>"></textarea>
                         </div>
 
                         <div class="form-group input-group-sm">
-                            <label for="txt_count"><?php echo $text_fastorder_count;?></label>
+                            <label for="txt_count" style="line-height: 2.5em;"><?php echo $text_fastorder_count;?></label>
                        <!--      <input type="text" onchange="priceCalc(this.value)" class="form-control" id="count<?php echo $product_id;?>" name="count<?php echo $product_id;?>" placeholder="<?php echo $text_fastorder_input_count_placeholder;?>" value='1'></input> -->
                          <select onchange="priceCalc(this.value)" class="form-control" id="count<?php echo $product_id;?>" name="count<?php echo $product_id;?>" placeholder="<?php echo $text_fastorder_input_count_placeholder;?>" default='1'>
                             <option value="1">1</option>

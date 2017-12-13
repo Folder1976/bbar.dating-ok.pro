@@ -20,7 +20,7 @@
 		<div class="row">
 			<div class="col-md-12">
 			    <h2><?php echo $heading_title; ?></h2>
-			    <p class="well"><?php echo $text_returning_customer; ?> &nbsp;<a href="#" onclick="jQuery('.login-form').toggle();return false;"><?php echo $text_i_am_returning_customer; ?></a></p>
+			    <p class="well"><a href="#" onclick="jQuery('.login-form').toggle();return false;" style="text-decoration: underline;"><?php echo $text_i_am_returning_customer; ?></a></p>
 			    
 			    <div class="login-form registerbox clearfix" style="display:none">
 				<div class="row">
@@ -55,7 +55,7 @@
 				  </div>
 				  
 				  <?php //if (!isset($address)) {?>
-				  <div class="form-group" >
+				  <div class="form-group" style="display: none;">
 				    <label class="control-label"><?php echo $entry_customer_group; ?></label>
 				    <?php foreach ($customer_groups as $customer_group) { ?>
 				    <?php if ($customer_group['customer_group_id'] == $customer_group_id) { ?>
@@ -74,24 +74,24 @@
 				    <?php } ?>
 				  </div>
 				  <div class="form-group required col-md-6">
-				    <label class="control-label" for="input-payment-firstname"><?php echo $entry_firstname; ?></label>
-				    <input type="text" name="firstname" value="<?php if (isset($address['firstname'])) echo $address['firstname']; elseif (isset($firstname)) echo $firstname; ?>" placeholder="<?php echo str_replace(':','',$entry_firstname); ?>" id="input-payment-firstname" class="form-control" <?php if (isset($customer_id)) {?> readonly<?php }?>/>
+				    <!-- <label class="control-label" for="input-payment-firstname"><?php echo $entry_firstname; ?></label> -->
+				    <input type="text" name="firstname" value="<?php if (isset($address['firstname'])) echo $address['firstname']; elseif (isset($firstname)) echo $firstname; ?>" placeholder="<?php echo str_replace(':','',$entry_firstname); ?>*" id="input-payment-firstname" class="form-control" <?php if (isset($customer_id)) {?> readonly<?php }?>/>
 				  </div>
 				  <div class="form-group required col-md-6">
-				    <label class="control-label" for="input-payment-lastname"><?php echo $entry_lastname; ?></label>
-				    <input type="text" name="lastname" value="<?php if (isset($lastname)) echo $lastname;?>" placeholder="<?php echo str_replace(':','',$entry_lastname); ?>" id="input-payment-lastname" class="form-control" <?php if (isset($customer_id)) {?> readonly<?php }?>/>
+				    <!-- <label class="control-label" for="input-payment-lastname"><?php echo $entry_lastname; ?></label> -->
+				    <input type="text" name="lastname" value="<?php if (isset($lastname)) echo $lastname;?>" placeholder="<?php echo str_replace(':','',$entry_lastname); ?>*" id="input-payment-lastname" class="form-control" <?php if (isset($customer_id)) {?> readonly<?php }?>/>
 				  </div>
 				  <div class="form-group required col-md-12">
-				    <label class="control-label" for="input-payment-email"><?php echo $entry_email; ?></label>
-				    <input type="text" name="email" value="<?php if (isset($email)) echo $email;?>" placeholder="<?php echo str_replace(':','',$entry_email); ?>" id="input-payment-email" class="form-control" <?php if (isset($customer_id)) {?> readonly<?php }?>/>
+				    <!-- <label class="control-label" for="input-payment-email"><?php echo $entry_email; ?></label> -->
+				    <input type="text" name="email" value="<?php if (isset($email)) echo $email;?>" placeholder="<?php echo str_replace(':','',$entry_email); ?>*" id="input-payment-email" class="form-control" <?php if (isset($customer_id)) {?> readonly<?php }?>/>
 				  </div>
 				  <div class="form-group required  col-md-6">
-				    <label class="control-label" for="input-payment-telephone"><?php echo $entry_telephone; ?></label>
-				    <input type="text" name="telephone" value="<?php if (isset($telephone)) echo $telephone;?>" placeholder="<?php echo str_replace(':','',$entry_telephone); ?>" id="input-payment-telephone" class="form-control" <?php if (isset($customer_id)) {?> readonly<?php }?>/>
+				    <!-- <label class="control-label" for="input-payment-telephone"><?php echo $entry_telephone; ?></label> -->
+				    <input type="text" name="telephone" value="<?php if (isset($telephone)) echo $telephone;?>" placeholder="<?php echo str_replace(':','',$entry_telephone); ?>*" id="input-payment-telephone" class="form-control" <?php if (isset($customer_id)) {?> readonly<?php }?>/>
 				  </div>
 				  <?php //if (!$checkout_hide_fax) {?>
 				  <div class="form-group col-md-6">
-				    <label class="control-label" for="input-payment-fax"><?php echo $entry_fax; ?></label>
+				    <!-- <label class="control-label" for="input-payment-fax"><?php echo $entry_fax; ?></label> -->
 				    <input type="text" name="fax" value="<?php if (isset($fax)) echo $fax;?>" placeholder="<?php echo str_replace(':','',$entry_fax); ?>" id="input-payment-fax" class="form-control" <?php if (isset($customer_id)) {?> readonly<?php }?>/>
 				  </div>
 				  <?php //}?>
@@ -130,7 +130,7 @@
 
 				  <div id="payment-address-new" <?php if (isset($customer_id) && $addresses) {?>	style="display:none"<?php }?>>
 				  <?php // if (!$checkout_hide_company){?>
-				  <div class="form-group col-md-6">
+				  <div class="form-group col-md-6" style="display: none;">
 				    <label class="control-label" for="input-payment-company"><?php echo $entry_company; ?></label>
 				    <input type="text" name="company" value="<?php if (isset($company)) echo $company;?>" placeholder="<?php echo str_replace(':','',$entry_company); ?>" id="input-payment-company" class="form-control" />
 				  </div>
@@ -158,17 +158,17 @@
 				   <?php } }?>
 				  
 				  <div class="form-group required col-md-12">
-				    <label class="control-label" for="input-payment-address-1"><?php echo $entry_address_1; ?></label>
-				    <input type="text" name="address_1" value="<?php if (isset($address_1)) echo $address_1;?>" placeholder="<?php echo str_replace(':','',$entry_address_1); ?>" id="input-payment-address-1" class="form-control" />
+				    <!-- <label class="control-label" for="input-payment-address-1"><?php echo $entry_address_1; ?></label> -->
+				    <input type="text" name="address_1" value="<?php if (isset($address_1)) echo $address_1;?>" placeholder="<?php echo str_replace(':','',$entry_address_1); ?>*" id="input-payment-address-1" class="form-control" />
 				  </div>
 				  <div class="form-group col-md-12">
-				    <label class="control-label" for="input-payment-address-2"><?php echo $entry_address_2; ?></label>
+				    <!-- <label class="control-label" for="input-payment-address-2"><?php echo $entry_address_2; ?></label> -->
 				    <input type="text" name="address_2" value="<?php if (isset($address_2)) echo $address_2;?>" placeholder="<?php echo str_replace(':','',$entry_address_2); ?>" id="input-payment-address-2" class="form-control" />
 				  </div>
 				  <div class="form-group required col-md-6">
-				    <label class="control-label" for="input-payment-country"><?php echo $entry_country; ?></label>
+				    <!-- <label class="control-label" for="input-payment-country"><?php echo $entry_country; ?></label> -->
 				    <select name="country_id" id="input-payment-country" class="form-control">
-				      <option value=""><?php echo $text_select; ?></option>
+				      <option value=""><?php echo $text_select; ?>*</option>
 				      <?php foreach ($countries as $country) { ?>
 				      <?php if ($country['country_id'] == $country_id) { ?>
 				      <option value="<?php echo $country['country_id']; ?>" selected="selected"><?php echo $country['name']; ?></option>
@@ -179,17 +179,17 @@
 				    </select>
 				  </div>
 				  <div class="form-group required col-md-6">
-				    <label class="control-label" for="input-payment-zone"><?php echo $entry_zone;; ?></label>
+				    <!-- <label class="control-label" for="input-payment-zone"><?php echo $entry_zone;; ?></label> -->
 				    <select name="zone_id" id="input-payment-zone" class="form-control">
 				    </select>
 				  </div>
 				  <div class="form-group required col-md-6">
-				    <label class="control-label" for="input-payment-city"><?php echo $entry_city; ?></label>
-				    <input type="text" name="city" value="<?php if (isset($city)) echo $city;?>" placeholder="<?php echo str_replace(':','',$entry_city); ?>" id="input-payment-city" class="form-control" />
+				    <!-- <label class="control-label" for="input-payment-city"><?php echo $entry_city; ?></label> -->
+				    <input type="text" name="city" value="<?php if (isset($city)) echo $city;?>" placeholder="<?php echo str_replace(':','',$entry_city); ?>*" id="input-payment-city" class="form-control" />
 				  </div>
 				  <div class="form-group required col-md-6">
-				    <label class="control-label" for="input-payment-postcode"><?php echo $entry_postcode; ?></label>
-				    <input type="text" name="postcode" value="<?php if (isset($postcode)) echo $postcode;?>" placeholder="<?php echo str_replace(':','',$entry_postcode); ?>" id="input-payment-postcode" class="form-control" />
+				    <!-- <label class="control-label" for="input-payment-postcode"><?php echo $entry_postcode; ?></label> -->
+				    <input type="text" name="postcode" value="<?php if (isset($postcode)) echo $postcode;?>" placeholder="<?php echo str_replace(':','',$entry_postcode); ?>*" id="input-payment-postcode" class="form-control" />
 				  </div>
 				</div>
 
@@ -203,12 +203,12 @@
 				
 				<div class="register-form" style="display:none">
 				      <div class="form-group required col-md-6">
-					<label class="control-label" for="input-payment-password"><?php echo $entry_password; ?></label>
-					<input type="password" name="password" value="" placeholder="<?php echo str_replace(':','',$entry_password); ?>" id="input-payment-password" class="form-control" />
+					<!-- <label class="control-label" for="input-payment-password"><?php echo $entry_password; ?></label> -->
+					<input type="password" name="password" value="" placeholder="<?php echo str_replace(':','',$entry_password); ?>*" id="input-payment-password" class="form-control" />
 				      </div>
 				      <div class="form-group required col-md-6">
-					<label class="control-label" for="input-payment-confirm"><?php echo $entry_confirm; ?></label>
-					<input type="password" name="confirm" value="" placeholder="<?php echo str_replace(':','',$entry_confirm); ?>" id="input-payment-confirm" class="form-control" />
+					<!-- <label class="control-label" for="input-payment-confirm"><?php echo $entry_confirm; ?></label> -->
+					<input type="password" name="confirm" value="" placeholder="<?php echo str_replace(':','',$entry_confirm); ?>*" id="input-payment-confirm" class="form-control" />
 				      </div>
 				</div>
 			<?php /*} else {?>
@@ -281,10 +281,10 @@
 		      </div>
 		    </div>			      
 		    <div class="col-md-6">
-			<div class="shiptobilling clearfix">
+			<div class="shiptobilling clearfix" style="display: none;">
 				    <h3><?php echo $text_checkout_shipping_address; ?></h3>
 					<?php if (!isset($customer_id)) {?>
-				    <label class="checkbox">
+				    <label class="checkbox" style="text-decoration: underline;cursor: pointer;">
 					    <input type="checkbox" name="shipping_address" value="new" <?php if (isset($address_id)) echo 'checked="checked"';?> onclick="jQuery('.shipping-address').toggle()"><?php echo $text_address_new; ?>
 				    </label>
 					<?php } ?>
@@ -586,25 +586,25 @@
 					  <textarea name="comment" rows="3" class="form-control"><?php echo $comment; ?></textarea>
 					</p>
 					<?php if ($text_agree) { ?>
-					<div class="buttons clearfix">
+					<div class="buttons clearfix" style="display: none;">
 					  <div class="pull-right"><?php echo $text_agree; ?>
 					    <?php if ($agree) { ?>
 					    <input type="checkbox" name="agree" value="1" checked="checked" />
 					    <?php } else { ?>
-					    <input type="checkbox" name="agree" value="1" />
+					    <input type="checkbox" name="agree" value="1"/>
 					    <?php } ?>
 					    &nbsp;
 					  </div>
 					</div>
 					<?php } else { ?>
-					<div class="buttons">
+					<div class="buttons text-right" style="display: none;">
 					  <div class="pull-right">
 					    <input type="button" value="<?php echo $button_continue; ?>" id="button-payment-method" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" class="g-btn" />
 					  </div>
 					</div>
 					<?php } ?>
 					
-					<div class="payment clearfix">
+					<div class="payment clearfix text-right">
 					    <?php if ($payment) echo $payment; else {?>
 					    <input type="button" class="g-btn" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" id="button-register" value="<?php echo $heading_title;?>">
 					    <?php }?></div>

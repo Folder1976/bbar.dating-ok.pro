@@ -92,7 +92,7 @@ $special_price_and_currency = explode('  ', $special);
               <!-- END :  button fastorder -->
             </div>
             <div>
-              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="g-btn g-btn--buy"><?php echo $button_cart; ?></button>
+              <button type="button" id="button-cart" class="g-btn g-btn--buy"><?php echo $button_cart; ?></button>
             </div>
 
             <ul class="promo">
@@ -442,7 +442,7 @@ $('#button-cart').on('click', function() {
 		data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
 		dataType: 'json',
 		beforeSend: function() {
-			$('#button-cart').html('loading');
+			// $('#button-cart').html('loading');
 		},
 		complete: function() {
 			$('#button-cart').html('<?php echo $button_cart; ?>');
@@ -574,7 +574,7 @@ $('#button-review').on('click', function() {
 		dataType: 'json',
 		data: $("#form-review").serialize(),
 		beforeSend: function() {
-			$('#button-review').html('loading');
+			// $('#button-review').html('loading');
 		},
 		complete: function() {
 			$('#button-review').html('<?php echo $button_continue; ?>');

@@ -1678,37 +1678,43 @@ li.fancybox-thumbs-loading {
 .fancybox-is-open .fancybox-bg {
   opacity: .62; }
 
+.fb-modal h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px; }
+
+.fb-modal h4 {
+  color: #010101;
+  font-size: 16px;
+  margin-top: 35px; }
+
+.fb-modal a {
+  color: #0c559d;
+  border-bottom: 1px dashed;
+  font-size: 13px; }
+  .fb-modal a:hover {
+    text-decoration: none; }
+
+.fb-modal p {
+  font-size: 12px;
+  line-height: 18px; }
+
+.fb-modal .form-group {
+  margin-bottom: 15px; }
+
+.fb-modal input[type="text"],
+.fb-modal input[type="email"],
+.fb-modal input[type="password"] {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  line-height: 24px;
+  padding: 10px;
+  box-sizing: border-box; }
+
 .modal-account {
   padding: 26px 50px;
   max-width: 470px; }
-  .modal-account h2 {
-    font-weight: 300;
-    text-transform: uppercase;
-    color: #000;
-    margin-bottom: 20px; }
-  .modal-account h4 {
-    color: #010101;
-    font-size: 16px;
-    margin-top: 35px; }
-  .modal-account a {
-    color: #0c559d;
-    border-bottom: 1px dashed;
-    font-size: 13px; }
-    .modal-account a:hover {
-      text-decoration: none; }
-  .modal-account p {
-    font-size: 12px;
-    line-height: 18px; }
-  .modal-account .form-group {
-    margin-bottom: 15px; }
-  .modal-account input[type="text"],
-  .modal-account input[type="email"],
-  .modal-account input[type="password"] {
-    width: 100%;
-    border: 1px solid #d9d9d9;
-    line-height: 24px;
-    padding: 10px;
-    box-sizing: border-box; }
   .modal-account .g-btn {
     background: #ccac8b;
     color: #fff;
@@ -1721,6 +1727,12 @@ li.fancybox-thumbs-loading {
       margin-right: 4px; }
       .modal-account .social-login a:hover {
         opacity: .7; }
+
+.modal-fastorder {
+  padding: 26px 20px !important;
+  max-width: 470px; }
+  .modal-fastorder .g-btn {
+    font-size: 18px; }
 
 /*
 == malihu jquery custom scrollbar plugin ==
@@ -3458,6 +3470,9 @@ textarea:focus, input:focus {
   display: block;
   padding: 10px 15px; }
 
+.list-unstyled {
+  margin-bottom: 40px; }
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -3624,6 +3639,13 @@ legend {
       line-height: 31px; }
   .last-news__item {
     margin-bottom: 20px; }
+
+/* account */
+.account-account main {
+  margin-bottom: 60px; }
+
+[class*="account-"] table {
+  margin-bottom: 10px; }
 
 .header {
   border-top: 5px solid #f6be82;
@@ -3807,6 +3829,15 @@ legend {
 .basket .form-group {
   float: none; }
 
+.shipping-method {
+  margin-bottom: 40px; }
+
+.payment-method {
+  margin-bottom: 40px; }
+
+.payment {
+  padding-top: 40px; }
+
 .breadcrumb {
   padding: 20px 0 10px;
   font-style: italic; }
@@ -3988,6 +4019,8 @@ legend {
     margin-bottom: 40px; }
   .products-bottom {
     margin-bottom: 50px; }
+  .products .g-btn--buy {
+    width: calc(100% - 36px); }
 
 .product-layout .button-group {
   position: absolute;
@@ -4002,7 +4035,8 @@ legend {
   padding: 0;
   height: 0;
   overflow: hidden;
-  transition: all 300ms; }
+  transition: all 300ms;
+  white-space: nowrap; }
 
 .product-layout .product-thumb {
   border: 1px solid #e5e5e5;
@@ -4015,7 +4049,7 @@ legend {
     .product-layout .product-thumb:hover .button-group {
       transition: all 300ms;
       padding: 5px;
-      bottom: -42px;
+      bottom: -44px;
       height: auto;
       -webkit-box-shadow: 3px 14px 14px rgba(0, 0, 0, 0.4);
       -moz-box-shadow: 3px 14px 14px rgba(0, 0, 0, 0.4);

@@ -10,11 +10,7 @@
 
 
 
-.fb-modal {}
-
-.modal-account {
-    padding: 26px 50px;
-    max-width: 470px;
+.fb-modal {
     h2 {
         font-weight: 300;
         text-transform: uppercase;
@@ -52,6 +48,11 @@
         padding: 10px;
         box-sizing: border-box;
     }
+}
+
+.modal-account {
+    padding: 26px 50px;
+    max-width: 470px;
 
     .g-btn {
         background: #ccac8b;
@@ -67,5 +68,13 @@
             margin-right: 4px;
             &:hover { opacity: .7; }
         }
+    }
+}
+
+.modal-fastorder {
+    padding: 26px 20px !important;
+    max-width: 470px;
+    .g-btn {
+        font-size: 18px;
     }
 }
