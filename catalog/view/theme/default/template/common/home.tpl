@@ -29,7 +29,7 @@
     </div>
 </div>
 
-<div class="slider"><?php echo $content_top_news; ?></div>
+<div class="slider slider-featured"><?php echo $content_top_news; ?></div>
 
 
 <div class="last-news-post">

@@ -89,8 +89,6 @@ textarea:focus, input:focus{
 // .rtl .ff-1 { font-family: $global_ff1_rtl; }
 // .rtl .ff-2 { font-family: $global_ff2_rtl; }
 
-
-
 .container {
     width: 100%;
     max-width: 1170px;
@@ -242,6 +240,9 @@ textarea:focus, input:focus{
 
 .list-unstyled {
     margin-bottom: 40px;
+    li {
+        line-height: 1.7em;
+    }
 }
 
 
@@ -278,6 +279,9 @@ legend {
     width: 100%;
     margin-bottom: 20px;
     border-bottom: 1px solid #e5e5e5;
+}
+fieldset {
+    margin-bottom: 10px;
 }
 
 .alert {
@@ -372,8 +376,12 @@ legend {
 }
 
 .featured {
-    margin-bottom: 80px;
+    margin-bottom: 0;
     h2 { text-align: center; }
+}
+
+.slider-featured {
+    margin-bottom: 0;
 }
 .advantages {
     margin-bottom: 70px;

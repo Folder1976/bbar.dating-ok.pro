@@ -238,6 +238,15 @@ table {
 .fa-check-circle:before {
   content: ""; }
 
+.fa-share:before {
+  content: ""; }
+
+.fa-eye:before {
+  content: ""; }
+
+.fa-shopping-cart:before {
+  content: ""; }
+
 .fa-filter:before {
   content: ""; }
 
@@ -3472,6 +3481,8 @@ textarea:focus, input:focus {
 
 .list-unstyled {
   margin-bottom: 40px; }
+  .list-unstyled li {
+    line-height: 1.7em; }
 
 input[type="text"],
 input[type="email"],
@@ -3500,6 +3511,9 @@ legend {
   width: 100%;
   margin-bottom: 20px;
   border-bottom: 1px solid #e5e5e5; }
+
+fieldset {
+  margin-bottom: 10px; }
 
 .alert {
   padding: 8px 14px 8px 14px; }
@@ -3564,9 +3578,12 @@ legend {
     background: #f7d0a7; }
 
 .featured {
-  margin-bottom: 80px; }
+  margin-bottom: 0; }
   .featured h2 {
     text-align: center; }
+
+.slider-featured {
+  margin-bottom: 0; }
 
 .advantages {
   margin-bottom: 70px; }
@@ -3831,9 +3848,13 @@ legend {
 
 .shipping-method {
   margin-bottom: 40px; }
+  .shipping-method .radio {
+    margin-bottom: 10px; }
 
 .payment-method {
   margin-bottom: 40px; }
+  .payment-method .radio {
+    margin-bottom: 10px; }
 
 .payment {
   padding-top: 40px; }
@@ -4020,7 +4041,8 @@ legend {
   .products-bottom {
     margin-bottom: 50px; }
   .products .g-btn--buy {
-    width: calc(100% - 36px); }
+    width: calc(100% - 36px);
+    max-width: 165px; }
 
 .product-layout .button-group {
   position: absolute;

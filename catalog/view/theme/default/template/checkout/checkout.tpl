@@ -22,27 +22,25 @@
 			    <h2><?php echo $heading_title; ?></h2>
 			    <p class="well"><a href="#" onclick="jQuery('.login-form').toggle();return false;" style="text-decoration: underline;"><?php echo $text_i_am_returning_customer; ?></a></p>
 			    
-			    <div class="login-form registerbox clearfix" style="display:none">
-				<div class="row">
-				<div class="col-md-12 message"></div>
-				<form class="form-inline" role="form">
-			        <div class="col-md-8">
-				<div class="form-group">
-				  <label class="control-label" for="input-email"><?php echo $entry_email; ?></label>
-				  <input type="text" name="email" value="" placeholder="<?php echo str_replace(':','',$entry_email); ?>" id="input-email" class="form-control" />
-				</div>&nbsp;&nbsp;
-				<div class="form-group">
-				  <label class="control-label" for="input-password"><?php echo $entry_password; ?></label>
-				  <input type="password" name="password" value="" placeholder="<?php echo str_replace(':','',$entry_password); ?>" id="input-password" class="form-control" />
+			    <div class="login-form registerbox clearfix" style="display:none; margin-bottom: 40px;">
+					<div class="row">
+						<div class="col-md-12 message"></div>
+						<form class="form-inline" role="form">
+					        <div class="col-md-6">
+								<div class="form-group">
+								  <!-- <label class="control-label" for="input-email"><?php echo $entry_email; ?></label> -->
+								  <input type="text" name="email" value="" placeholder="<?php echo str_replace(':','',$entry_email); ?>" id="input-email" class="form-control" />
+								</div>
+								<div class="form-group">
+								  <!-- <label class="control-label" for="input-password"><?php echo $entry_password; ?></label> -->
+								  <input type="password" name="password" value="" placeholder="<?php echo str_replace(':','',$entry_password); ?>" id="input-password" class="form-control" />
+								</div>
+							    <input type="button" value="<?php echo $button_login; ?>" id="button-login" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" class="g-btn" />
+							    <a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a>
+							</div>
+					    </form>
+				    </div>
 				</div>
-				</div>
-				<div class="form-group col-md-4">
-				    <input type="button" value="<?php echo $button_login; ?>" id="button-login" data-loading-text="<?php if (isset($text_loading)) echo $text_loading;else echo 'loading ...' ?>" class="g-btn" />
-				    <a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a>
-				</div>
-			      </form>
-			    </div>
-			</div>
 		    </div>
 		</div>
 		<?php }?>
@@ -96,7 +94,7 @@
 				  </div>
 				  <?php //}?>
 
-				  <div class="col-md-12">
+				  <div class="form-group col-md-12">
 				    <h3 class="clearfix"><?php echo $text_your_address; ?></h3>
 
 			      <?php if ($addresses) { ?>
@@ -289,7 +287,7 @@
 				    </label>
 					<?php } ?>
 			    </div>
-			    <div class="shipping-address" <?php if (isset($shipping_address_id) || isset($customer_id)) echo 'style="display:block"'; else echo 'style="display:none"'; ?>>
+			    <div class="shipping-address" style="display: none;" <?php //if (isset($shipping_address_id) || isset($customer_id)) echo 'style="display:block"'; else echo 'style="display:none"'; ?>>
 			      <?php if ($addresses) { ?>
 				  <?php if (isset($customer_id)) {?>	  
 			      <div class="radio">

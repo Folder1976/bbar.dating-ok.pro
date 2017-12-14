@@ -67,7 +67,7 @@
           </fieldset>
           <div class="buttons">
             <div class="pull-right">
-              <input class="g-btn btn-primary" type="submit" value="<?php echo $button_submit; ?>" />
+              <input class="g-btn btn-primary" type="submit" value="<?php echo $button_submit; ?>" style="margin-right: 15px;" />
             </div>
           </div>
         </form>
@@ -75,29 +75,31 @@
     </div>
 
     <div class="row">
-      <div class="advantages">
-        <ul>
-            <li>
-                <i class="ico-bonus"></i>
-                <div class="title">Bonus Plus</div>
-                <div class="desc">Экономь и накапливай бонусы с каждой покупкой</div>
-            </li>
-            <li>
-                <i class="ico-delivery"></i>
-                <div class="title">Быстрая доставка</div>
-                <div class="desc">Доставляем товар по всей стране в течение 2 дней</div>
-            </li>
-            <li>
-                <i class="ico-coupon"></i>
-                <div class="title">Лучшие цены</div>
-                <div class="desc">Экономь и накапливай бонусы с каждой покупкой</div>
-            </li>
-            <li>
-                <i class="ico-guarantees"></i>
-                <div class="title">Гарантии</div>
-                <div class="desc">Официальная гарантия от производителя</div>
-            </li>
-        </ul>
+      <div class="col-md-12">
+        <div class="advantages">
+          <ul>
+              <li>
+                  <i class="ico-bonus"></i>
+                  <div class="title">Bonus Plus</div>
+                  <div class="desc">Экономь и накапливай бонусы с каждой покупкой</div>
+              </li>
+              <li>
+                  <i class="ico-delivery"></i>
+                  <div class="title">Быстрая доставка</div>
+                  <div class="desc">Доставляем товар по всей стране в течение 2 дней</div>
+              </li>
+              <li>
+                  <i class="ico-coupon"></i>
+                  <div class="title">Лучшие цены</div>
+                  <div class="desc">Экономь и накапливай бонусы с каждой покупкой</div>
+              </li>
+              <li>
+                  <i class="ico-guarantees"></i>
+                  <div class="title">Гарантии</div>
+                  <div class="desc">Официальная гарантия от производителя</div>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
 

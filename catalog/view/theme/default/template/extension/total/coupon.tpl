@@ -4,11 +4,11 @@
   </div>
   <div id="collapse-coupon" class="panel-collapse" style="display: none;">
     <div class="panel-body">
-      <label class="col-sm-2 control-label" for="input-coupon"><?php echo $entry_coupon; ?></label>
+      <!-- <label class="col-sm-2 control-label" for="input-coupon"><?php echo $entry_coupon; ?></label> -->
       <div class="input-group">
         <input type="text" name="coupon" value="<?php echo $coupon; ?>" placeholder="<?php echo $entry_coupon; ?>" id="input-coupon" class="form-control" />
         <span class="input-group-btn">
-        <input type="button" value="<?php echo $button_coupon; ?>" id="button-coupon" data-loading-text="<?php echo $text_loading; ?>"  class="g-btn" />
+        <input type="button" value="<?php echo $button_coupon; ?>" id="button-coupon" class="g-btn" />
         </span></div>
       <script type="text/javascript"><!--
 $('#button-coupon').on('click', function() {
@@ -18,10 +18,10 @@ $('#button-coupon').on('click', function() {
 		data: 'coupon=' + encodeURIComponent($('input[name=\'coupon\']').val()),
 		dataType: 'json',
 		beforeSend: function() {
-			$('#button-coupon').button('loading');
+			// $('#button-coupon').button('loading');
 		},
 		complete: function() {
-			$('#button-coupon').button('reset');
+			// $('#button-coupon').button('reset');
 		},
 		success: function(json) {
 			$('.alert').remove();

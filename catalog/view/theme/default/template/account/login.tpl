@@ -35,13 +35,13 @@
             <p><strong><?php echo $text_i_am_returning_customer; ?></strong></p>
             <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
               <div class="form-group">
-                <label class="control-label" for="input-email"><?php echo $entry_email; ?></label>
+                <!-- <label class="control-label" for="input-email"><?php echo $entry_email; ?></label> -->
                 <input type="text" name="email" value="<?php echo $email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
               </div>
               <div class="form-group">
-                <label class="control-label" for="input-password"><?php echo $entry_password; ?></label>
+                <!-- <label class="control-label" for="input-password"><?php echo $entry_password; ?></label> -->
                 <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
-                <a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a></div>
+                <a href="<?php echo $forgotten; ?>" style="text-decoration: underline;"><?php echo $text_forgotten; ?></a></div>
               <input type="submit" value="<?php echo $button_login; ?>" class="g-btn btn-primary" />
               <?php if ($redirect) { ?>
               <input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />

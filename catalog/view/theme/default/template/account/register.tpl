@@ -497,10 +497,10 @@
                 <?php echo $text_no; ?></label>
               <?php } else { ?>
               <label class="radio-inline">
-                <input type="radio" name="newsletter" value="1" />
+                <input type="radio" name="newsletter" value="1" checked="checked" />
                 <?php echo $text_yes; ?></label>
               <label class="radio-inline">
-                <input type="radio" name="newsletter" value="0" checked="checked" />
+                <input type="radio" name="newsletter" value="0"  />
                 <?php echo $text_no; ?></label>
               <?php } ?>
             </div>

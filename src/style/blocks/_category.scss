@@ -236,7 +236,10 @@
     flex-wrap: wrap;
     &-row { margin-bottom: 40px; }
     &-bottom { margin-bottom: 50px; }
-    .g-btn--buy { width: calc(100% - 36px); }
+    .g-btn--buy {
+        width: calc(100% - 36px);
+        max-width: 165px;
+    }
 }
 
 .product-layout {
