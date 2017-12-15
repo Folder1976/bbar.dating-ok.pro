@@ -3586,7 +3586,7 @@ fieldset {
   margin-bottom: 0; }
 
 .advantages {
-  margin-bottom: 70px; }
+  margin-bottom: 65px; }
   .advantages ul {
     display: flex;
     justify-content: space-between; }
@@ -3764,11 +3764,7 @@ fieldset {
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    right: 0;
-    z-index: 10; }
+    bottom: -50px; }
     .header .bottom-line ul {
       margin: 0 auto;
       display: flex;
@@ -3884,7 +3880,6 @@ fieldset {
 .category {
   color: #000; }
   .category .advantages {
-    background: #fcfcfc;
     padding: 40px;
     margin-bottom: 40px; }
 
@@ -4042,10 +4037,8 @@ fieldset {
   flex-wrap: wrap; }
   .products-row {
     margin-bottom: 40px; }
-  .products-bottom {
-    margin-bottom: 50px; }
   .products .g-btn--buy {
-    width: calc(100% - 36px);
+    width: calc(100% - 37px);
     max-width: 165px; }
 
 .product-layout .button-group {
@@ -4418,6 +4411,7 @@ fieldset {
 
 [class*="information-"] .advantages {
   margin-top: 30px;
+  margin-bottom: 40px;
   border-top: 1px solid #e5e5e5;
   padding-top: 70px; }
 
