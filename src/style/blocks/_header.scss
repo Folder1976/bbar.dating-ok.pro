@@ -5,6 +5,11 @@
 
     .logo {
         text-align: center;
+        img {
+            max-height: 120px;
+            position: relative;
+            top: -25px;
+        }
     }
 
     .top-line {

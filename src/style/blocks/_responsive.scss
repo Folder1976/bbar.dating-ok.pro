@@ -154,7 +154,10 @@
         }
         .top-searh { padding-top: 30px; }
         .middle-line .discount { text-align: center; }
-        .logo { margin: 30px auto; }
+        .logo {
+            margin: 30px auto;
+            img { top: 0; }
+        }
         .bottom-line ul { display: none; }
 
         .top-nav {

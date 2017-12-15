@@ -3669,6 +3669,10 @@ fieldset {
   position: relative; }
   .header .logo {
     text-align: center; }
+    .header .logo img {
+      max-height: 120px;
+      position: relative;
+      top: -25px; }
   .header .top-line {
     min-height: 72px;
     padding: 25px 0 20px; }
@@ -4604,6 +4608,8 @@ fieldset {
     text-align: center; }
   .header .logo {
     margin: 30px auto; }
+    .header .logo img {
+      top: 0; }
   .header .bottom-line ul {
     display: none; }
   .header .top-nav.open {
