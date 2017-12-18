@@ -28,7 +28,7 @@ h5 { font-size: 14px; }
 h6 { font-size: 12px; }
 
 main {
-    padding-top: 50px;
+    // padding-top: 50px;
     margin-bottom: 30px;
     &.home {
         padding-top: 0;
@@ -364,6 +364,10 @@ fieldset {
 // ************** Home ***************
 .slider {
     margin-bottom: 60px;
+    .owl-wrapper-outer {
+        box-shadow: none;
+        border: 0;
+    }
     .owl-item .item { text-align: center; }
     .owl-pagination { top: -30px; }
     .owl-controls .owl-page {

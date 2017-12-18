@@ -3190,7 +3190,6 @@ h6 {
   font-size: 12px; }
 
 main {
-  padding-top: 50px;
   margin-bottom: 30px; }
   main.home {
     padding-top: 0; }
@@ -3567,6 +3566,9 @@ fieldset {
 
 .slider {
   margin-bottom: 60px; }
+  .slider .owl-wrapper-outer {
+    box-shadow: none;
+    border: 0; }
   .slider .owl-item .item {
     text-align: center; }
   .slider .owl-pagination {
@@ -3764,7 +3766,7 @@ fieldset {
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
-    bottom: -50px; }
+    position: relative; }
     .header .bottom-line ul {
       margin: 0 auto;
       display: flex;

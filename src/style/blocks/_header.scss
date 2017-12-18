@@ -160,7 +160,8 @@
         font-size: 14px;
         text-transform: uppercase;
         // position: absolute;
-        bottom: -$bottom-line-height;
+        position: relative;
+        // bottom: -$bottom-line-height;
         // left: 0;
         // right: 0;
         // z-index: 10;

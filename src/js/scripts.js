@@ -66,7 +66,8 @@ $('.js-dropdown-filter').on('click', function(){
         menu.removeClass('open').css({height: 0});
         $(this).removeClass('open');
     } else {
-        menu.addClass('open').css({height: $(menu)[0].scrollHeight});
+        // menu.addClass('open').css({height: $(menu)[0].scrollHeight});
+        menu.addClass('open').css({height: 'auto'});
         $(this).addClass('open');
     }
 });
