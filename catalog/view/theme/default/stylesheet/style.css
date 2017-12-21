@@ -3666,6 +3666,9 @@ fieldset {
 [class*="account-"] table {
   margin-bottom: 10px; }
 
+[class*="account-"] .buttons {
+  margin-top: 15px; }
+
 .header {
   border-top: 5px solid #f6be82;
   position: relative; }

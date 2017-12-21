@@ -67,7 +67,7 @@
           <?php echo $entry_description; ?></label>
       </p>
       <input type="button" value="<?php echo $button_search; ?>" id="button-search" class="g-btn btn-primary" />
-      <h2><?php echo $text_search; ?></h2>
+      <h2 style="margin-top: 50px;"><?php echo $text_search; ?></h2>
       <?php if ($products) { ?>
       <div class="row">
         <div class="col-md-2 col-sm-6 hidden-xs">

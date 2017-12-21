@@ -22,7 +22,7 @@
     </div>
     <?php } ?>
   </div>
-  <div class="panel-footer text-right">
+  <div class="panel-footer text-center">
     <button type="button" id="button-filter" class="g-btn"><?php echo $button_filter; ?></button>
   </div>
 </div>
