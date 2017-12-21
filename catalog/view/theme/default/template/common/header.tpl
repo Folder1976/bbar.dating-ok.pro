@@ -66,10 +66,10 @@
                 <?php } else { ?>
                   <li><a href="javascript:void(0)" class="js-open-registration">Регистрация</a>/<a href="javascript:void(0)" class="js-open-authorization">Вход</a></li>
                 <?php } ?>
-                  <li><a href="#">Оптовикам</a></li>
-                  <li><a href="#">Новости</a></li>
-                  <li><a href="#">Обучение</a></li>
-                  <li><a href="#">Отзывы</a></li>
+                  <li><a href="/wholesalers">Оптовикам</a></li>
+                  <li><a href="/news">Новости</a></li>
+                  <li><a href="/education">Обучение</a></li>
+                  <li><a href="/reviews">Отзывы</a></li>
                   <li><a href="/index.php?route=information/contact">Контакты</a></li>
                 </ul>
               </div>
@@ -136,7 +136,7 @@
             <?php } ?>
           </div>
           <div class="form-group required">
-            <input type="email" name="email" placeholder="E-mail" required >
+            <input type="text" name="email" placeholder="E-mail" required >
             <?php if (false) { //($error_email) { ?>
             <div class="text-danger"><?php echo $error_email; ?></div>
             <?php } ?>
@@ -170,7 +170,7 @@
 
         <form action="/index.php?route=account/login" method="POST">
           <div class="form-group required">
-            <input type="email" name="email" placeholder="Ваш E-mail" required >
+            <input type="text" name="email" placeholder="Ваш E-mail" required >
             <?php if (false) { //($error_email) { ?>
             <div class="text-danger"><?php echo $error_email; ?></div>
             <?php } ?>
@@ -202,7 +202,7 @@
 
         <form action="/index.php?route=account/forgotten" method="POST">
           <div class="form-group required">
-            <input type="email" name="email" placeholder="Ваш E-mail" required >
+            <input type="text" name="email" placeholder="Ваш E-mail" required >
             <?php if (false) { //($error_email) { ?>
             <div class="text-danger"><?php echo $error_email; ?></div>
             <?php } ?>

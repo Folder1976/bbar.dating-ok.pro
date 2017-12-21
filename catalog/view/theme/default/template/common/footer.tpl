@@ -8,10 +8,10 @@
           <div class="footer-nav">
             <ul>
               <li><a href="javascript:void(0)" class="js-open-registration">Регистрация</a>/<a href="javascript:void(0)" class="js-open-authorization">Вход</a></li>
-              <li><a href="#">Оптовикам</a></li>
-              <li><a href="#">Новости</a></li>
-              <li><a href="#">Обучение</a></li>
-              <li><a href="#">Отзывы</a></li>
+              <li><a href="/wholesalers">Оптовикам</a></li>
+              <li><a href="/news">Новости</a></li>
+              <li><a href="/education">Обучение</a></li>
+              <li><a href="/reviews">Отзывы</a></li>
               <li><a href="/index.php?route=information/contact">Контакты</a></li>
             </ul>
           </div>
