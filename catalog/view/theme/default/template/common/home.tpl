@@ -144,4 +144,5 @@
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+<div style="height: 30px;">&nbsp;</div>
 <?php echo $footer; ?>

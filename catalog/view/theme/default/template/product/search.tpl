@@ -1,5 +1,10 @@
 <?php echo $header; ?>
 <main>
+  <style>
+    h1{
+      margin-top: 10px;
+    }
+  </style>
 <div class="container">
   <ul class="breadcrumb" style="display: none;">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -110,7 +115,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div  class="products" style="padding-left: 225px;">
         <?php foreach ($products as $product) { ?>
         <div class="product-layout product-grid col-xs-12">
           <div class="product-thumb">
