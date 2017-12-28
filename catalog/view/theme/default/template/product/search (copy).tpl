@@ -1,14 +1,4 @@
 <?php echo $header; ?>
-<style>
-  .products-row{
-      padding-left: 20%;
-  }
-  @media (max-width: 770px){
-    .products-row{
-      padding-left: 0;
-    }
-  }
-</style>
 <main>
   <style>
     h1{
@@ -125,44 +115,43 @@
           </div>
         </div>
       </div>
-    <div class="row products-row">
-        <div class="products">
-          <?php foreach ($products as $product) { ?>
-          <div class="product-layout product-grid">
-            <div class="product-thumb">
-              <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
-              <div>
-                <div class="caption">
-                  <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['manufacturer']; ?></a></h4>
-                  <h3><?php echo $product['name']; ?></h3>
-                  <?php if ($product['price']) { ?>
-                  <?php $price_and_currency = explode('  ', $product['price']); ?>
+      <div  class="products" style="padding-left: 225px;">
+        <?php foreach ($products as $product) { ?>
+        <div class="product-layout product-grid col-xs-12">
+          <div class="product-thumb">
+            <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
+            <div>
+              <div class="caption">
+                <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['manufacturer']; ?></a></h4>
+                <h3><?php echo $product['name']; ?></h3>
+                <?php if ($product['price']) { ?>
+                <?php $price_and_currency = explode('  ', $product['price']); ?>
 
-                  <p class="price">
-                    <?php if (!$product['special']) { ?>
-                    <?php echo round($price_and_currency[0], 2); ?><span class="currency"> <?php echo $price_and_currency[1]; ?></span>
-                    <?php } else { ?>
-                    <?php $special_price_and_currency = explode('  ', $product['special']); ?>
-                    <span class="price-old"><?php echo round($price_and_currency[0], 2); ?></span> <span class="price-new"><?php echo round($special_price_and_currency[0], 2); ?></span> <span class="currency"> <?php echo $special_price_and_currency[1]; ?></span>
-                    <?php } ?>
-                    <?php if ($product['tax']) { ?>
-                    <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-                    <?php } ?>
-                  </p>
+                <p class="price">
+                  <?php if (!$product['special']) { ?>
+                  <?php echo round($price_and_currency[0], 2); ?><span class="currency"> <?php echo $price_and_currency[1]; ?></span>
+                  <?php } else { ?>
+                  <?php $special_price_and_currency = explode('  ', $product['special']); ?>
+                  <span class="price-old"><?php echo round($price_and_currency[0], 2); ?></span> <span class="price-new"><?php echo round($special_price_and_currency[0], 2); ?></span> <span class="currency"> <?php echo $special_price_and_currency[1]; ?></span>
                   <?php } ?>
-                  <?php if ($product['rating']) { ?>
-                  <div class="rating">
-                    <?php for ($i = 1; $i <= 5; $i++) { ?>
-                    <?php if ($product['rating'] < $i) { ?>
-                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                    <?php } else { ?>
-                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
-                    <?php } ?>
-                    <?php } ?>
-                  </div>
+                  <?php if ($product['tax']) { ?>
+                  <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+                  <?php } ?>
+                </p>
+                <?php } ?>
+                <?php if ($product['rating']) { ?>
+                <div class="rating">
+                  <?php for ($i = 1; $i <= 5; $i++) { ?>
+                  <?php if ($product['rating'] < $i) { ?>
+                  <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                  <?php } else { ?>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                  <?php } ?>
                   <?php } ?>
                 </div>
-                <div class="button-group">
+                <?php } ?>
+              </div>
+              <div class="button-group">
                   <!-- Button fastorder -->
                     <div class="button-gruop" style="display: none;">
                       <?php echo $product['fastorder']; ?>
@@ -172,13 +161,12 @@
                   <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');" class="g-btn g-btn--small g-btn--wishlist"><i class="fa fa-heart"></i></button>
                   <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');" class="g-btn g-btn--small g-btn--compare"><i class="fa fa-exchange"></i></button>
                 </div>
-              </div>
             </div>
           </div>
-          <?php } ?>
         </div>
+        <?php } ?>
       </div>
-        <div class="row">
+      <div class="row">
         <div class="col-sm-6 text-left"><?php echo $pagination; ?></div>
         <div class="col-sm-6 text-right"><?php echo $results; ?></div>
       </div>

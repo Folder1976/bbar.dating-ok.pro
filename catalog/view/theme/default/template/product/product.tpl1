@@ -320,7 +320,7 @@ $special_price_and_currency = explode('  ', $special);
             <?php echo $captcha; ?>
             <div class="buttons clearfix">
               <div class="pull-right">
-                <button style="margin-right: 15px;" type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="g-btn btn btn-primary"><?php echo $button_continue; ?></button>
+                <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
               </div>
             </div>
             </div>
